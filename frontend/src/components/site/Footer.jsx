@@ -63,18 +63,18 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-950 text-slate-100 mt-24 overflow-hidden" data-testid="site-footer">
       {/* Decorative ambient glows */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-orange-500/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-orange-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-purple-500/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 relative">
         {/* Newsletter band */}
         <div className="grid lg:grid-cols-2 gap-10 pb-14 border-b border-slate-800/80">
           <div>
-            <div className="text-[11px] uppercase tracking-[0.24em] text-orange-400 font-extrabold mb-3">
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-400 font-bold mb-3">
               The PCT Briefing
             </div>
-            <h3 className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            <h3 className="text-3xl lg:text-4xl font-bold text-white tracking-[-0.005em]">
               Signal over noise. Once a month.
             </h3>
             <p className="text-slate-200 mt-3 max-w-md">
@@ -92,13 +92,13 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@company.com"
-              className="h-12 bg-slate-900/60 border-slate-700 text-white placeholder:text-slate-400 rounded-full px-5 focus-visible:ring-orange-500"
+              className="h-12 bg-slate-900/60 border-slate-700 text-white placeholder:text-slate-400 rounded-full px-5 focus-visible:ring-blue-500"
               data-testid="newsletter-email-input"
             />
             <Button
               type="submit"
               disabled={busy}
-              className="h-12 rounded-full px-7 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold shadow-lg shadow-orange-500/30"
+              className="h-12 rounded-full px-7 bg-gradient-to-r from-slate-900 to-slate-700 hover:from-slate-800 hover:to-slate-900 text-white font-bold shadow-lg shadow-slate-900/20"
               data-testid="newsletter-submit"
             >
               {busy ? "Subscribing…" : "Subscribe"}
@@ -109,7 +109,7 @@ export default function Footer() {
         {/* Main grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mt-14">
           <div className="col-span-2">
-            <Link to="/" className="inline-flex items-center bg-white rounded-2xl px-4 py-2.5 shadow-lg shadow-orange-500/20 group hover:scale-105 transition-transform duration-300" data-testid="footer-logo">
+            <Link to="/" className="inline-flex items-center bg-white rounded-2xl px-4 py-2.5 shadow-lg shadow-slate-900/15 group hover:scale-105 transition-transform duration-300" data-testid="footer-logo">
               <img
                 src="https://customer-assets.emergentagent.com/job_pct-enterprise/artifacts/lp5jwh1s_Track_The_Breach_blue_Logo_1__2_-removebg-preview.png"
                 alt="People's Choice Tech"
@@ -121,14 +121,14 @@ export default function Footer() {
               staffing & digital transformation, delivered with enterprise rigor and startup pace.
             </p>
             <div className="mt-6 space-y-2.5 text-[14px]">
-              <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2.5 text-slate-100 hover:text-orange-400 transition-colors" data-testid="footer-email">
-                <Mail className="h-4 w-4 text-orange-400" /> {COMPANY.email}
+              <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2.5 text-slate-100 hover:text-blue-400 transition-colors" data-testid="footer-email">
+                <Mail className="h-4 w-4 text-blue-400" /> {COMPANY.email}
               </a>
-              <a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`} className="flex items-center gap-2.5 text-slate-100 hover:text-orange-400 transition-colors" data-testid="footer-phone">
-                <Phone className="h-4 w-4 text-orange-400" /> {COMPANY.phone}
+              <a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`} className="flex items-center gap-2.5 text-slate-100 hover:text-blue-400 transition-colors" data-testid="footer-phone">
+                <Phone className="h-4 w-4 text-blue-400" /> {COMPANY.phone}
               </a>
               <div className="flex items-start gap-2.5 text-slate-200">
-                <MapPin className="h-4 w-4 text-orange-400 mt-0.5" /> {COMPANY.hq}
+                <MapPin className="h-4 w-4 text-blue-400 mt-0.5" /> {COMPANY.hq}
               </div>
             </div>
             <div className="flex gap-3 mt-6">
@@ -136,7 +136,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="h-10 w-10 rounded-full border border-slate-700 grid place-items-center text-slate-100 hover:bg-orange-500 hover:border-orange-500 hover:text-white hover:-translate-y-1 transition-all"
+                  className="h-10 w-10 rounded-full border border-slate-700 grid place-items-center text-slate-100 hover:bg-blue-500 hover:border-blue-600 hover:text-white hover:-translate-y-1 transition-all"
                   data-testid={`footer-social-${i}`}
                   aria-label="Social link"
                 >
@@ -148,14 +148,14 @@ export default function Footer() {
 
           {SECTIONS.map((sec) => (
             <div key={sec.title}>
-              <div className="text-[11px] uppercase tracking-[0.18em] text-orange-400 font-extrabold mb-4">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-blue-400 font-bold mb-4">
                 {sec.title}
               </div>
               <ul className="space-y-2.5 text-[14px]">
                 {sec.links.map((l) => (
                   <li key={l.label}>
-                    <Link to={l.to} className="text-slate-200 hover:text-orange-400 transition-colors inline-flex items-center gap-1 group">
-                      <span className="h-px w-0 bg-orange-400 group-hover:w-3 transition-all duration-300" />
+                    <Link to={l.to} className="text-slate-200 hover:text-blue-400 transition-colors inline-flex items-center gap-1 group">
+                      <span className="h-px w-0 bg-blue-400 group-hover:w-3 transition-all duration-300" />
                       {l.label}
                     </Link>
                   </li>
@@ -167,13 +167,13 @@ export default function Footer() {
 
         {/* Offices */}
         <div className="mt-14 pt-10 border-t border-slate-800/80">
-          <div className="text-[11px] uppercase tracking-[0.18em] text-orange-400 font-extrabold mb-4">
+          <div className="text-[11px] uppercase tracking-[0.18em] text-blue-400 font-bold mb-4">
             Global Offices
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {COMPANY.offices.map((o) => (
               <div key={o.city} className="text-sm group cursor-default">
-                <div className="text-white font-bold group-hover:text-orange-400 transition-colors">{o.city}</div>
+                <div className="text-white font-bold group-hover:text-blue-400 transition-colors">{o.city}</div>
                 <div className="text-slate-300 text-[12px]">{o.country} · {o.tz}</div>
               </div>
             ))}
@@ -183,9 +183,9 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-slate-300">
           <div>© {new Date().getFullYear()} People's Choice Tech. All rights reserved.</div>
           <div className="flex gap-5">
-            <Link to="/privacy" className="hover:text-orange-400 transition-colors">Privacy</Link>
-            <Link to="/terms" className="hover:text-orange-400 transition-colors">Terms</Link>
-            <Link to="/contact" className="hover:text-orange-400 transition-colors">Contact</Link>
+            <Link to="/privacy" className="hover:text-blue-400 transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-blue-400 transition-colors">Terms</Link>
+            <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
           </div>
         </div>
       </div>

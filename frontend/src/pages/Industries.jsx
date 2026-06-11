@@ -9,8 +9,8 @@ export default function Industries() {
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Industries</div>
-          <h1 className="mt-6 text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-slate-900 max-w-4xl">
+          <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Industries</div>
+          <h1 className="mt-6 text-5xl lg:text-6xl font-bold tracking-[-0.005em] leading-[1.05] text-slate-900 max-w-4xl">
             Deep domain expertise across 20 industries — and counting.
           </h1>
           <p className="mt-5 text-lg text-slate-600 max-w-2xl">
@@ -29,9 +29,9 @@ export default function Industries() {
               className="group p-7 bg-white border border-slate-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all"
               data-testid={`industries-grid-${i.slug}`}
             >
-              <h3 className="text-xl font-bold text-slate-900 group-hover:text-orange-700">{i.name}</h3>
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-700">{i.name}</h3>
               <p className="mt-2 text-slate-600 text-[14.5px]">{i.desc}</p>
-              <div className="mt-4 text-orange-600 text-sm font-semibold flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+              <div className="mt-4 text-blue-600 text-sm font-semibold flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
                 Explore <ArrowRight className="h-3.5 w-3.5" />
               </div>
             </Link>

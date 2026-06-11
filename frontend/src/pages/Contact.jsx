@@ -63,8 +63,8 @@ export default function Contact() {
         <GradientBlobs variant="page" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
-            <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Contact</div>
-            <h1 className="mt-5 text-4xl lg:text-5xl font-black tracking-[-0.03em] leading-[1.05] text-slate-900">{headline}</h1>
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Contact</div>
+            <h1 className="mt-5 text-4xl lg:text-5xl font-bold tracking-[-0.005em] leading-[1.05] text-slate-900">{headline}</h1>
             <p className="mt-5 text-slate-600 text-lg max-w-md">{meta.subtitle}</p>
 
             <div className="mt-10 space-y-4">
@@ -105,7 +105,7 @@ export default function Contact() {
             {sent ? (
               <div className="bg-white border border-slate-200 rounded-3xl p-10 text-center" data-testid="form-success">
                 <CheckCircle2 className="h-14 w-14 text-emerald-500 mx-auto" />
-                <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-900">Got it — thank you.</h2>
+                <h2 className="mt-5 text-3xl font-bold tracking-[-0.005em] text-slate-900">Got it — thank you.</h2>
                 <p className="mt-3 text-slate-600 max-w-md mx-auto">
                   We've received your message and will be in touch within 24 hours. Look out for an email from <b>{COMPANY.email}</b>.
                 </p>

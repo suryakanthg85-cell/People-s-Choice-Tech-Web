@@ -27,32 +27,60 @@ export default function ServiceDetail() {
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">{service.category}</div>
-          <div className="mt-6 flex items-start gap-5 max-w-4xl">
-            <div className="h-14 w-14 rounded-2xl bg-slate-900 grid place-items-center shrink-0">
-              <Icon className="h-6 w-6 text-white" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7">
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">{service.category}</div>
+            <div className="mt-6 flex items-start gap-5">
+              <div className="h-14 w-14 rounded-2xl bg-slate-900 grid place-items-center shrink-0">
+                <Icon className="h-6 w-6 text-white" />
+              </div>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.05] text-slate-900">{service.title}</h1>
             </div>
-            <div>
-              <h1 className="text-4xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-slate-900">{service.title}</h1>
-              <p className="mt-4 text-lg text-slate-600 max-w-2xl">{service.short}</p>
+            <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-2xl">{service.overview || service.short}</p>
+            <div className="mt-8 flex gap-3 flex-wrap">
+              <Link to="/contact?type=proposal" data-testid="service-detail-cta-proposal">
+                <Button className="h-11 rounded-full px-6 bg-slate-900 hover:bg-blue-700 text-white font-semibold">Request a proposal</Button>
+              </Link>
+              <Link to="/contact?type=consultation" data-testid="service-detail-cta-consult">
+                <Button variant="outline" className="h-11 rounded-full px-6 hover:border-blue-600 hover:text-blue-700">Talk to an expert</Button>
+              </Link>
             </div>
           </div>
-          <div className="mt-8 flex gap-3">
-            <Link to="/contact?type=proposal" data-testid="service-detail-cta-proposal">
-              <Button className="h-11 rounded-full px-6 bg-slate-900 hover:bg-slate-800 text-white font-semibold">Request a proposal</Button>
-            </Link>
-            <Link to="/contact?type=consultation" data-testid="service-detail-cta-consult">
-              <Button variant="outline" className="h-11 rounded-full px-6">Talk to an expert</Button>
-            </Link>
-          </div>
+          {service.image && (
+            <div className="lg:col-span-5">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/50 aspect-[4/3]">
+                <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/30 via-transparent to-transparent" />
+              </div>
+            </div>
+          )}
         </div>
       </section>
+
+      {service.deliverables && (
+        <section className="py-14 bg-white/60 backdrop-blur-sm border-y border-slate-200 relative">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Deliverables</div>
+            <h2 className="mt-3 text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 max-w-2xl">What we ship — every engagement, every time.</h2>
+            <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {service.deliverables.map((d, i) => {
+                const tones = ["bg-blue-50 text-blue-700", "bg-sky-50 text-sky-700", "bg-emerald-50 text-emerald-700", "bg-purple-50 text-purple-700", "bg-teal-50 text-teal-700"];
+                return (
+                  <div key={d} className="p-5 bg-white border border-slate-200 rounded-2xl hover:border-blue-200 hover:shadow-md transition">
+                    <div className={`h-9 w-9 rounded-lg ${tones[i % tones.length]} grid place-items-center mb-3 font-bold text-[13px]`}>{String(i + 1).padStart(2, "0")}</div>
+                    <div className="text-slate-900 font-semibold">{d}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
-            <h2 className="text-3xl font-black tracking-tight text-slate-900">What you get</h2>
+            <h2 className="text-3xl font-bold tracking-[-0.005em] text-slate-900">What you get</h2>
             <div className="mt-6 grid sm:grid-cols-2 gap-3">
               {service.bullets.map((b) => (
                 <div key={b} className="flex items-start gap-3 p-4 bg-white border border-slate-200 rounded-xl">
@@ -62,7 +90,7 @@ export default function ServiceDetail() {
               ))}
             </div>
 
-            <h2 className="mt-12 text-3xl font-black tracking-tight text-slate-900">Why partner with PCT</h2>
+            <h2 className="mt-12 text-3xl font-bold tracking-[-0.005em] text-slate-900">Why partner with PCT</h2>
             <div className="mt-6 grid sm:grid-cols-2 gap-3">
               {WHY.map((w) => (
                 <div key={w.title} className="p-5 bg-white border border-slate-200 rounded-xl">
@@ -75,7 +103,7 @@ export default function ServiceDetail() {
 
           <aside className="lg:col-span-5">
             <div className="bg-slate-950 text-white rounded-2xl p-7 sticky top-28">
-              <div className="text-[11px] uppercase tracking-[0.18em] text-orange-300 font-bold">Engagement at a glance</div>
+              <div className="text-[11px] uppercase tracking-[0.18em] text-blue-300 font-bold">Engagement at a glance</div>
               <div className="mt-4 space-y-4">
                 <div>
                   <div className="text-[12px] text-slate-400">Typical start</div>
@@ -106,11 +134,11 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-slate-50/60 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-black tracking-tight text-slate-900 max-w-2xl">How we deliver — a 5-step engagement.</h2>
+          <h2 className="text-3xl font-bold tracking-[-0.005em] text-slate-900 max-w-2xl">How we deliver — a 5-step engagement.</h2>
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-5 gap-4">
             {PROCESS.map((p) => (
               <div key={p.step} className="p-6 bg-white border border-slate-200 rounded-2xl">
-                <div className="text-2xl font-black text-orange-600">{p.step}</div>
+                <div className="text-2xl font-bold text-blue-600">{p.step}</div>
                 <div className="mt-2 font-bold text-slate-900">{p.title}</div>
                 <div className="mt-1.5 text-[13.5px] text-slate-600">{p.desc}</div>
               </div>
@@ -121,7 +149,7 @@ export default function ServiceDetail() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-black tracking-tight text-slate-900">Related work</h2>
+          <h2 className="text-3xl font-bold tracking-[-0.005em] text-slate-900">Related work</h2>
           <div className="mt-6 grid md:grid-cols-3 gap-5">
             {CASE_STUDIES.slice(0, 3).map((c) => (
               <Link to="/case-studies" key={c.slug} className="bg-white border border-slate-200 rounded-2xl overflow-hidden group">
@@ -129,7 +157,7 @@ export default function ServiceDetail() {
                   <img src={c.image} alt={c.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition" />
                 </div>
                 <div className="p-5">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-orange-600 font-bold">{c.industry}</div>
+                  <div className="text-[11px] uppercase tracking-[0.18em] text-blue-600 font-bold">{c.industry}</div>
                   <div className="mt-1.5 font-bold text-slate-900">{c.title}</div>
                 </div>
               </Link>
@@ -140,7 +168,7 @@ export default function ServiceDetail() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-black tracking-tight text-slate-900">Explore other services</h2>
+          <h2 className="text-3xl font-bold tracking-[-0.005em] text-slate-900">Explore other services</h2>
           <div className="mt-6 grid sm:grid-cols-3 gap-4">
             {others.map((s) => {
               const I = ICONS[s.icon] || Code2;

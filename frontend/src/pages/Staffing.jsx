@@ -10,8 +10,8 @@ export default function Staffing() {
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Staffing & Talent</div>
-          <h1 className="mt-6 text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-slate-900 max-w-4xl">
+          <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Staffing & Talent</div>
+          <h1 className="mt-6 text-5xl lg:text-6xl font-bold tracking-[-0.005em] leading-[1.05] text-slate-900 max-w-4xl">
             Hire vetted engineers in days — not months.
           </h1>
           <p className="mt-5 text-lg text-slate-600 max-w-2xl">
@@ -35,8 +35,8 @@ export default function Staffing() {
             { icon: Check, k: "92%", v: "Conversion to long-term" },
           ].map((m) => (
             <div key={m.v}>
-              <m.icon className="h-5 w-5 text-orange-600 mb-3" />
-              <div className="text-3xl font-black text-slate-900">{m.k}</div>
+              <m.icon className="h-5 w-5 text-blue-600 mb-3" />
+              <div className="text-3xl font-bold text-slate-900">{m.k}</div>
               <div className="text-sm text-slate-500">{m.v}</div>
             </div>
           ))}
@@ -45,13 +45,13 @@ export default function Staffing() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-black tracking-tight text-slate-900 max-w-xl">Choose the engagement that fits your stage.</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-[-0.005em] text-slate-900 max-w-xl">Choose the engagement that fits your stage.</h2>
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {STAFFING.map((s) => (
               <div key={s.title} className="p-7 bg-white border border-slate-200 rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all" data-testid={`staffing-card-${s.title.replace(/\s+/g, '-').toLowerCase()}`}>
                 <h3 className="text-xl font-bold text-slate-900">{s.title}</h3>
                 <p className="mt-2 text-slate-600 text-[14.5px]">{s.desc}</p>
-                <Link to="/contact?type=proposal" className="mt-5 inline-flex items-center gap-1.5 text-orange-600 font-semibold text-sm">
+                <Link to="/contact?type=proposal" className="mt-5 inline-flex items-center gap-1.5 text-blue-600 font-semibold text-sm">
                   Hire for this <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -65,7 +65,7 @@ export default function Staffing() {
           <div className="bg-slate-950 rounded-3xl p-10 lg:p-14 text-white">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-black tracking-tight">Need to scale your team yesterday?</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold tracking-[-0.005em]">Need to scale your team yesterday?</h2>
                 <p className="text-slate-300 mt-3 max-w-md">Send us your hiring need — we'll come back within 24 hours with 3 vetted profiles.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">

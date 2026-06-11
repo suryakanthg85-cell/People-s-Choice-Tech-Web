@@ -10,8 +10,8 @@ export default function CaseStudies() {
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Case Studies</div>
-          <h1 className="mt-6 text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-slate-900 max-w-3xl">
+          <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Case Studies</div>
+          <h1 className="mt-6 text-5xl lg:text-6xl font-bold tracking-[-0.005em] leading-[1.05] text-slate-900 max-w-3xl">
             Outcomes, not promises. Pick a transformation to dive into.
           </h1>
         </div>
@@ -31,8 +31,8 @@ export default function CaseStudies() {
                 <img src={c.image} alt={c.title} loading="lazy" className="w-full h-full object-cover" />
               </div>
               <div className="lg:col-span-7 p-8 lg:p-12">
-                <div className="text-[11px] uppercase tracking-[0.18em] text-orange-600 font-bold">{c.industry}</div>
-                <h3 className="mt-3 text-3xl font-black tracking-tight text-slate-900">{c.title}</h3>
+                <div className="text-[11px] uppercase tracking-[0.18em] text-blue-600 font-bold">{c.industry}</div>
+                <h3 className="mt-3 text-3xl font-bold tracking-[-0.005em] text-slate-900">{c.title}</h3>
                 <p className="mt-3 text-slate-600 text-[15.5px] leading-relaxed">{c.summary}</p>
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   {c.impact.map((i) => (
@@ -50,7 +50,7 @@ export default function CaseStudies() {
 
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-black tracking-tight text-slate-900">Could yours be next?</h2>
+          <h2 className="text-4xl font-bold tracking-[-0.005em] text-slate-900">Could yours be next?</h2>
           <p className="mt-3 text-slate-600">Tell us where you're stuck. We'll show you what's possible.</p>
           <Link to="/contact?type=consultation" className="inline-block mt-6">
             <Button className="h-12 rounded-full px-7 bg-slate-900 hover:bg-slate-800 text-white font-semibold" data-testid="case-studies-cta">

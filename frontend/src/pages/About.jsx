@@ -20,8 +20,8 @@ export default function About() {
       <section className="relative pt-20 pb-20 overflow-hidden">
         <GradientBlobs variant="page" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">About People's Choice Tech</div>
-          <h1 className="mt-6 text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-slate-900 max-w-4xl">
+          <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">About People's Choice Tech</div>
+          <h1 className="mt-6 text-5xl lg:text-6xl font-bold tracking-[-0.005em] leading-[1.05] text-slate-900 max-w-4xl">
             An emerging global technology company, founded by people who built at the world's largest IT firms.
           </h1>
           <p className="mt-6 text-lg text-slate-600 max-w-2xl">
@@ -36,7 +36,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {STATS.map((s) => (
             <div key={s.label}>
-              <div className="text-5xl font-black tracking-tight text-slate-900">{s.value}</div>
+              <div className="text-5xl font-bold tracking-[-0.005em] text-slate-900">{s.value}</div>
               <div className="text-sm mt-2 text-slate-500 font-medium">{s.label}</div>
             </div>
           ))}
@@ -52,8 +52,8 @@ export default function About() {
             { icon: Heart, title: "Our Promise", desc: "Honest counsel, world-class engineering, and a long-term relationship — not just a project." },
           ].map((b) => (
             <div key={b.title} className="bg-white border border-slate-200 p-7 rounded-2xl">
-              <div className="h-11 w-11 rounded-xl bg-orange-50 grid place-items-center mb-5">
-                <b.icon className="h-5 w-5 text-orange-600" />
+              <div className="h-11 w-11 rounded-xl bg-blue-50 grid place-items-center mb-5">
+                <b.icon className="h-5 w-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-slate-900">{b.title}</h3>
               <p className="mt-2 text-slate-600">{b.desc}</p>
@@ -66,8 +66,8 @@ export default function About() {
       <section id="founders" className="py-24 bg-slate-50/60 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl">
-            <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Founders</div>
-            <h2 className="mt-5 text-4xl lg:text-5xl font-black tracking-tight text-slate-900">Led by builders. Backed by experience.</h2>
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Founders</div>
+            <h2 className="mt-5 text-4xl lg:text-5xl font-bold tracking-[-0.005em] text-slate-900">Led by builders. Backed by experience.</h2>
           </div>
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             {FOUNDERS.map((f) => (
@@ -76,7 +76,7 @@ export default function About() {
                   <img src={f.image} alt={f.name} className="h-24 w-24 rounded-2xl object-cover" />
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-slate-900">{f.name}</h3>
-                    <div className="text-orange-600 font-semibold text-sm">{f.role}</div>
+                    <div className="text-blue-600 font-semibold text-sm">{f.role}</div>
                     <a href={`mailto:${f.email}`} className="text-[13px] text-slate-500 hover:text-slate-900 mt-1 inline-block">{f.email}</a>
                   </div>
                 </div>
@@ -97,8 +97,8 @@ export default function About() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Core Values</div>
-            <h2 className="mt-5 text-4xl lg:text-5xl font-black tracking-tight text-slate-900">What we believe.</h2>
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Core Values</div>
+            <h2 className="mt-5 text-4xl lg:text-5xl font-bold tracking-[-0.005em] text-slate-900">What we believe.</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {VALUES.map((v) => (
@@ -118,14 +118,14 @@ export default function About() {
       <section className="py-24 bg-slate-50/60 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <div className="text-[11px] uppercase tracking-[0.24em] text-orange-600 font-bold eyebrow-line">Global Presence</div>
-            <h2 className="mt-5 text-4xl lg:text-5xl font-black tracking-tight text-slate-900">Six offices. One delivery standard.</h2>
+            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Global Presence</div>
+            <h2 className="mt-5 text-4xl lg:text-5xl font-bold tracking-[-0.005em] text-slate-900">Six offices. One delivery standard.</h2>
             <p className="mt-4 text-slate-600">Headquartered at {COMPANY.hq}, with engineering and client teams across the world.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {COMPANY.offices.map((o) => (
               <div key={o.city} className="bg-white p-5 rounded-xl border border-slate-200" data-testid={`office-card-${o.city.toLowerCase().replace(/\s+/g, '-')}`}>
-                <div className="text-[11px] uppercase tracking-[0.18em] text-orange-600 font-bold mb-2 flex items-center gap-1.5">
+                <div className="text-[11px] uppercase tracking-[0.18em] text-blue-600 font-bold mb-2 flex items-center gap-1.5">
                   <Globe2 className="h-3 w-3" /> {o.tz}
                 </div>
                 <div className="text-lg font-bold text-slate-900">{o.city}</div>
@@ -138,7 +138,7 @@ export default function About() {
 
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-black tracking-tight text-slate-900">Want to build with us?</h2>
+          <h2 className="text-4xl font-bold tracking-[-0.005em] text-slate-900">Want to build with us?</h2>
           <p className="mt-3 text-slate-600">We'd love to hear about your project, your team, or what you're trying to ship.</p>
           <Link to="/contact" className="inline-block mt-6">
             <Button className="h-12 rounded-full px-7 bg-slate-900 hover:bg-slate-800 text-white font-semibold" data-testid="about-cta-contact">
