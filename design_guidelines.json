@@ -1,0 +1,146 @@
+{
+  "project_name": "People's Choice Tech",
+  "theme": "Light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Soft Pastel Accents",
+  "design_philosophy": "A modern, enterprise-grade IT services platform inspired by Infosys and Stripe. Features a stark white structural layout anchored by deep charcoal typography, infused with soft, ambient pastel gradient blobs (blue, green, purple, orange) to add warmth, approachability, and modern tech flair without feeling cartoonish. Focus on 'Optical Clarity', high-end glassmorphism, and generous spacing.",
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F8FAFC",
+      "glass": "bg-white/70"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#94A3B8"
+    },
+    "brand": {
+      "primary": "#0F172A",
+      "primary_hover": "#1E293B",
+      "accent": "#2563EB",
+      "accent_hover": "#1D4ED8"
+    },
+    "gradient_blobs": {
+      "blue": "bg-blue-100/60",
+      "green": "bg-green-100/60",
+      "purple": "bg-purple-100/60",
+      "orange": "bg-orange-100/60"
+    },
+    "border": "#E2E8F0"
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Cabinet Grotesk, ui-sans-serif, system-ui, sans-serif",
+      "body": "General Sans, ui-sans-serif, system-ui, sans-serif",
+      "mono": "JetBrains Mono, ui-monospace, SFMono-Regular, monospace"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl font-black tracking-tighter leading-[1.1] text-slate-900",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900",
+      "h3": "text-xl sm:text-2xl font-bold tracking-tight text-slate-900",
+      "h4": "text-lg sm:text-xl font-semibold text-slate-900",
+      "body": "text-base sm:text-lg text-slate-600 leading-relaxed",
+      "overline": "text-sm font-bold tracking-[0.2em] uppercase text-blue-600"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-6 lg:px-8",
+    "section_padding": "py-20 lg:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "border_radius": "rounded-2xl"
+  },
+  "components_strategy": {
+    "buttons": "Shadcn Button. Primary: bg-slate-900 text-white hover:bg-slate-800. Secondary: bg-white text-slate-900 border border-slate-200 hover:bg-slate-50. Pill shaped (rounded-full) or smooth (rounded-xl) with subtle shadow.",
+    "cards": "Flat solid surfaces with a delicate 1px border (border-slate-200) and no shadow by default. On hover: slight lift (-translate-y-1) and elegant soft shadow (shadow-xl shadow-slate-200/50).",
+    "glassmorphism": "Used strictly for the sticky navigation header and floating CTA bars. backdrop-blur-xl bg-white/70 border-b border-white/20.",
+    "ambient_blobs": "Absolute positioned divs with extreme blur (blur-[100px] or blur-3xl) acting as background lighting. Use Framer Motion to slowly animate their x/y coordinates and scale to make the background 'breathe'.",
+    "accordion": "Shadcn Accordion for FAQs, minimalist styling, border-b only.",
+    "forms": "Shadcn Input, Textarea, Select, Checkbox. Generous padding, high contrast focus states (focus:ring-2 focus:ring-blue-500)."
+  },
+  "sections": [
+    {
+      "name": "Header",
+      "design": "Sticky top-0, z-50, Crystal Glassmorphism (bg-white/70 backdrop-blur-xl). Left: Logo. Center: Links (Services, Industries, Company). Right: 'Get Proposal' Button. Must have a mobile hamburger menu."
+    },
+    {
+      "name": "Hero",
+      "design": "Massive text. Overline: 'GLOBAL IT CONSULTING'. H1: 'Build, Scale & Transform with AI-Powered Technology Solutions'. Background features large, slowly moving pastel blobs (blue, green, purple, orange) that bleed into the pure white background. Two CTA buttons. Clean, high-impact."
+    },
+    {
+      "name": "Services Overview",
+      "design": "Bento Grid Layout. 10+ categories (Software Dev, AI, Cloud, Cybersecurity, etc.). Each card has a subtle pastel hover state or icon glow. High clarity, highly readable."
+    },
+    {
+      "name": "Technology Stack",
+      "design": "Infinite horizontal marquee (using react-fast-marquee). High contrast monochrome logos (AWS, Azure, React, Python, etc.) that light up in brand colors on hover."
+    },
+    {
+      "name": "Industries Served",
+      "design": "Grid layout. Cards featuring a top-aligned icon, strong heading, and short description. Clean, enterprise-style categorization (Healthcare, Finance, Retail, etc.)."
+    },
+    {
+      "name": "Why Choose Us & Process",
+      "design": "Two-column layout or staggered timeline. Left: Sticky heading with large metric numbers. Right: Scrolling list of values or development process steps. High contrast typography."
+    },
+    {
+      "name": "Founders",
+      "design": "Side-by-side or overlapping card layout featuring Gopal Giri and Divya Bharti. High-quality professional portraits. Includes a short bio and quote for each, emphasizing 10+ years of enterprise experience."
+    },
+    {
+      "name": "Global Presence",
+      "design": "Minimalist map vector or a clean grid of 6 cards for the offices (Nashik, Ahmednagar, Bengaluru, NYC, London, Singapore). Each shows the local time and address."
+    },
+    {
+      "name": "Client Success / Case Studies",
+      "design": "Large featured cards spanning 2 columns. Image on top/left, strong narrative text. Emphasize transformation metrics (e.g., 'Reduced latency by 40%')."
+    },
+    {
+      "name": "FAQ",
+      "design": "Centered, narrow max-w-3xl container using Shadcn Accordion. Clean, typography-focused."
+    },
+    {
+      "name": "Contact CTA",
+      "design": "Dark section (bg-slate-900 text-white) to break up the light theme and drive conversion. Form on the right, large heading 'Let's build the future together' on the left."
+    },
+    {
+      "name": "Footer",
+      "design": "Extensive enterprise navigation columns. Very clean, generous vertical padding. Minimalist copyright bottom bar."
+    }
+  ],
+  "image_urls": [
+    {
+      "category": "Hero / Office Background",
+      "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwb2ZmaWNlJTIwd29ya2Vyc3xlbnwwfHx8fDE3ODEyMTg1NjV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Group of people collaborating in a modern tech office using laptops. Great for 'About Us' or Hero background."
+    },
+    {
+      "category": "Founder - Gopal Giri",
+      "url": "https://images.unsplash.com/photo-1600878459138-e1123b37cb30?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODEyMTg1NjR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional corporate headshot of a man in a black suit. Use for Co-founder Gopal Giri."
+    },
+    {
+      "category": "Founder - Divya Bharti",
+      "url": "https://images.unsplash.com/photo-1609436132311-e4b0c9370469?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODEyMTg1NjR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional corporate headshot of a woman. Use for Co-founder Divya Bharti."
+    },
+    {
+      "category": "Abstract / Tech / AI",
+      "url": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhdGElMjB0ZWNobm9sb2d5JTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3ODEyMTg1Nzh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue data visualization with lines and dots. Use for Case Studies, AI section, or Tech Stack background."
+    },
+    {
+      "category": "Healthcare Industry",
+      "url": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBoZWFsdGhjYXJlJTIwdGVjaHxlbnwwfHx8fDE3ODEyMTg1Nzl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern healthcare tech with a laptop and stethoscope. Use for Industries Served - Healthcare."
+    }
+  ],
+  "instructions_to_main_agent": [
+    "INSTALL FONT: Ensure 'Cabinet Grotesk' and 'General Sans' are imported via Fontshare CDN or standard @font-face in index.css.",
+    "INSTALL LIBRARIES: Execute 'yarn add framer-motion lucide-react react-fast-marquee @phosphor-icons/react'.",
+    "CSS BLOBS: Create a custom component for the background blobs. Use absolute positioned divs with 'rounded-full blur-[100px] opacity-60' and the respective tailwind background colors (sky-100, purple-100, etc.). Use framer-motion to gently animate them.",
+    "COMPONENTS: Use Shadcn UI for structured elements (Accordion, Form, Input, Button).",
+    "DATA ATTRIBUTES: You MUST add a 'data-testid' to ALL interactive elements (buttons, links, form inputs). Use kebab-case and role-based naming (e.g., data-testid='hero-cta-button', data-testid='contact-form-email').",
+    "RESPONSIVE: Ensure the grid layouts collapse gracefully to grid-cols-1 on mobile. Mobile hamburger menu is strictly required.",
+    "NO PLACEHOLDERS: Use the image URLs provided in the JSON. For technology logos (AWS, React, etc.), use simple SVGs or Phosphor icons. Do NOT use fake placeholder image services."
+  ]
+}
