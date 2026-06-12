@@ -5,13 +5,14 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 import asyncio
+import smtplib
+import ssl
 import uuid
+from email.message import EmailMessage
 from pathlib import Path
 from pydantic import BaseModel, Field, EmailStr, ConfigDict
 from typing import Optional, List
 from datetime import datetime, timezone
-
-import resend
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -20,15 +21,16 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
-# Resend config (optional - falls back to DB-only storage if missing)
-RESEND_API_KEY = os.environ.get('RESEND_API_KEY')
-SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
+# Gmail SMTP config
+SMTP_HOST = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
+SMTP_PORT = int(os.environ.get('SMTP_PORT', '587'))
+SMTP_USER = os.environ.get('SMTP_USER', '')
+SMTP_PASS = os.environ.get('SMTP_PASS', '')
+EMAIL_FROM = os.environ.get('EMAIL_FROM') or os.environ.get('FROM_NAME', '') + f" <{SMTP_USER}>" if SMTP_USER else SMTP_USER
 NOTIFY_EMAILS = [e.strip() for e in os.environ.get(
-    'NOTIFY_EMAILS', 'hello@peopleschoice.tech,gopal@peopleschoice.tech,divya@peopleschoice.tech'
+    'NOTIFY_EMAILS', os.environ.get('ADMIN_EMAIL', 'hello@peopleschoice.tech')
 ).split(',') if e.strip()]
-
-if RESEND_API_KEY:
-    resend.api_key = RESEND_API_KEY
+EMAIL_ENABLED = bool(SMTP_USER and SMTP_PASS)
 
 app = FastAPI(title="People's Choice Tech API")
 api_router = APIRouter(prefix="/api")
@@ -111,17 +113,37 @@ def _build_email_html(sub: ContactSubmission) -> str:
 
 
 async def _send_notification(sub: ContactSubmission) -> bool:
-    if not RESEND_API_KEY or not NOTIFY_EMAILS:
+    if not EMAIL_ENABLED or not NOTIFY_EMAILS:
+        logger.warning("SMTP disabled or no recipients — skipping email")
         return False
+
+    def _send_sync():
+        msg = EmailMessage()
+        msg["Subject"] = f"[{sub.type.upper()}] {sub.name} — {sub.subject or sub.service or 'New inquiry'}"
+        msg["From"] = EMAIL_FROM
+        msg["To"] = ", ".join(NOTIFY_EMAILS)
+        msg["Reply-To"] = sub.email
+        # Plain-text fallback
+        msg.set_content(
+            f"New {sub.type} submission from {sub.name} <{sub.email}>\n\n"
+            f"Phone: {sub.phone or '-'}\nCompany: {sub.company or '-'}\n"
+            f"Service: {sub.service or '-'}\nBudget: {sub.budget or '-'}\n"
+            f"Subject: {sub.subject or '-'}\n\nMessage:\n{sub.message}\n\n"
+            f"Submitted at: {sub.created_at}"
+        )
+        msg.add_alternative(_build_email_html(sub), subtype="html")
+
+        context = ssl.create_default_context()
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=20) as server:
+            server.ehlo()
+            server.starttls(context=context)
+            server.ehlo()
+            server.login(SMTP_USER, SMTP_PASS)
+            server.send_message(msg)
+
     try:
-        params = {
-            "from": SENDER_EMAIL,
-            "to": NOTIFY_EMAILS,
-            "subject": f"[{sub.type.upper()}] {sub.name} — {sub.subject or sub.service or 'Inquiry'}",
-            "html": _build_email_html(sub),
-            "reply_to": sub.email,
-        }
-        await asyncio.to_thread(resend.Emails.send, params)
+        await asyncio.to_thread(_send_sync)
+        logger.info(f"Email sent to {NOTIFY_EMAILS} for submission {sub.id}")
         return True
     except Exception as e:
         logger.error(f"Email notification failed: {e}")
@@ -136,7 +158,7 @@ async def root():
 
 @api_router.get("/health")
 async def health():
-    return {"status": "healthy", "email_enabled": bool(RESEND_API_KEY)}
+    return {"status": "healthy", "email_enabled": EMAIL_ENABLED, "recipients": len(NOTIFY_EMAILS)}
 
 
 @api_router.post("/submissions", response_model=ContactSubmission)

@@ -12,6 +12,7 @@ import Technologies from "@/pages/Technologies";
 import Products from "@/pages/Products";
 import Staffing from "@/pages/Staffing";
 import CaseStudies from "@/pages/CaseStudies";
+import CaseStudyDetail from "@/pages/CaseStudyDetail";
 import Resources from "@/pages/Resources";
 import Careers from "@/pages/Careers";
 import Contact from "@/pages/Contact";
@@ -33,6 +34,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/staffing" element={<Staffing />} />
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />

@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import GradientBlobs from "./GradientBlobs";
+import WhatsappChat from "./WhatsappChat";
 
 export default function Layout({ children }) {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ export default function Layout({ children }) {
         <main className="flex-1">{children}</main>
         <Footer />
       </div>
+      <WhatsappChat />
     </div>
   );
 }

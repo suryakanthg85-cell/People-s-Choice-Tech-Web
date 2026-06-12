@@ -342,16 +342,21 @@ export default function Home() {
             {CASE_STUDIES.slice(0, 6).map((c) => (
               <Link
                 key={c.slug}
-                to="/case-studies"
-                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all"
+                to={`/case-studies/${c.slug}`}
+                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-blue-200 transition-all"
                 data-testid={`case-card-${c.slug}`}
               >
                 <div className="aspect-[4/3] overflow-hidden bg-slate-100">
                   <img src={c.image} alt={c.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
                 </div>
                 <div className="p-6">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-blue-600 font-bold">{c.industry}</div>
-                  <h3 className="mt-2 text-lg font-bold text-slate-900 leading-snug">{c.title}</h3>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <div className="text-[11px] uppercase tracking-[0.18em] text-blue-600 font-bold">{c.industry}</div>
+                    {c.pctProduct && (
+                      <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-[9.5px] font-bold uppercase tracking-wider">PCT Built</span>
+                    )}
+                  </div>
+                  <h3 className="mt-2 text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-700">{c.title}</h3>
                   <p className="mt-2 text-[14px] text-slate-600 line-clamp-2">{c.summary}</p>
                 </div>
               </Link>

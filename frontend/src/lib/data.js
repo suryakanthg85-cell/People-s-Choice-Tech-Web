@@ -87,6 +87,51 @@ export const TECH_STACK = {
 };
 
 export const CASE_STUDIES = [
+  {
+    slug: "track-the-breach",
+    title: "Track The Breach — AI-Powered Digital Identity Protection Platform",
+    industry: "Cybersecurity SaaS",
+    pctProduct: true,
+    summary: "We designed, engineered and launched Track The Breach — a cloud-native SaaS platform that gives individuals and organizations real-time visibility into their digital identity exposure, with AI-driven risk analysis on top.",
+    impact: ["Cloud-native SaaS launched", "AI-driven risk analysis", "Subscription-ready platform"],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80",
+    overview: "Track The Breach is a cybersecurity technology startup focused on helping individuals and organizations understand, monitor, and protect their digital identities. As cyber threats, data breaches, identity theft, and online impersonation continue to grow globally, the company identified a need for a modern platform that could provide visibility into personal data exposure.",
+    challenge: "Millions of users have their personal information exposed through data breaches every year. Existing solutions often focus on enterprise security while leaving individuals with limited visibility into their digital footprint. The client required a scalable platform that could detect exposed identity information, monitor online data leaks, provide AI-driven risk analysis, support multiple identity intelligence services, deliver actionable recommendations through a simple user experience, and scale globally with secure cloud infrastructure.",
+    solution: "Our development team designed and built Track The Breach as a cloud-native SaaS platform powered by modern web technologies and AI-driven analysis.",
+    modules: [
+      { name: "Digital Identity Monitoring", desc: "Users can monitor exposure related to email addresses, phone numbers, social media accounts, public profile information and personal identity data." },
+      { name: "Breach Intelligence Engine", desc: "The platform aggregates and analyzes publicly available breach intelligence sources to identify potential exposures and security risks." },
+      { name: "AI Risk Analysis", desc: "An AI-powered analysis layer helps users understand exposure severity, potential attack vectors, privacy risks and recommended mitigation actions." },
+      { name: "User Dashboard", desc: "A centralized dashboard provides identity monitoring results, scan history, security recommendations and account management tools." },
+      { name: "Subscription & Billing", desc: "Integrated payment processing enables free and premium plans, subscription management and secure billing workflows." },
+    ],
+    stack: {
+      Frontend: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      Backend: ["Serverless API", "Node.js", "TypeScript"],
+      Database: ["Supabase", "PostgreSQL", "Auth & User Management"],
+      Infrastructure: ["AWS Cloud", "Nginx", "PM2", "SSL Security"],
+      "AI & Intelligence": ["OpenAI Integration", "Automated Intelligence Processing", "Risk Classification Engine"],
+    },
+    phases: [
+      "Research and market validation",
+      "Platform architecture and infrastructure planning",
+      "Core feature development",
+      "Identity monitoring and breach intelligence integration",
+      "AI-driven recommendation engine",
+      "Testing, optimization, and security hardening",
+      "Production deployment and user onboarding",
+    ],
+    outcomes: [
+      "Secure cloud-based architecture",
+      "Real-time identity monitoring capabilities",
+      "AI-powered security recommendations",
+      "Subscription-ready SaaS model",
+      "Scalable infrastructure for future growth",
+      "Mobile-responsive user experience",
+      "Enterprise-ready foundation for future product expansion",
+    ],
+    quote: "Track The Breach demonstrates how modern cloud technologies, AI, and cybersecurity intelligence can be combined to create a scalable SaaS product that helps users better understand and protect their digital identities.",
+  },
   { slug: "healthcare-digital-transformation", title: "Healthcare Digital Transformation", industry: "Healthcare", summary: "Modernized a 200-hospital chain's patient experience with a unified app — 3M+ patients onboarded.", impact: ["62% faster patient onboarding", "41% reduction in no-shows", "4.8★ App Store rating"], image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBoZWFsdGhjYXJlJTIwdGVjaHxlbnwwfHx8fDE3ODEyMTg1Nzl8MA&ixlib=rb-4.1.0&q=85" },
   { slug: "ai-customer-support-platform", title: "AI Customer Support Platform", industry: "SaaS", summary: "Built a multi-agent RAG platform that resolves 70% of L1 tickets autonomously.", impact: ["70% L1 auto-resolution", "$2.4M/yr support savings", "8s avg first response"], image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhdGElMjB0ZWNobm9sb2d5JTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3ODEyMTg1Nzh8MA&ixlib=rb-4.1.0&q=85" },
   { slug: "ecommerce-modernization", title: "Headless Commerce Modernization", industry: "Retail", summary: "Replatformed a $180M GMV retailer to a headless stack — page speed up 3.2x.", impact: ["3.2× page speed", "28% conversion lift", "Zero downtime cut-over"], image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwb2ZmaWNlJTIwd29ya2Vyc3xlbnwwfHx8fDE3ODEyMTg1NjV8MA&ixlib=rb-4.1.0&q=85" },
@@ -120,6 +165,17 @@ export const FAQS = [
 ];
 
 export const PRODUCTS = [
+  {
+    name: "Track The Breach",
+    category: "Cybersecurity SaaS",
+    desc: "AI-powered digital identity protection platform. Monitor breaches, scan exposure, and get AI-driven risk recommendations.",
+    designedByPCT: true,
+    status: "Live",
+    url: "https://trackthebreach.com",
+    caseStudySlug: "track-the-breach",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80",
+    tags: ["AI", "SaaS", "Cybersecurity", "Next.js"],
+  },
   { name: "PCT Pulse", category: "AI Product", desc: "AI agent platform for internal ops, support and knowledge automation." },
   { name: "PCT Cloud Console", category: "Cloud Platform", desc: "Unified multi-cloud dashboard with cost, security and DevOps insights." },
   { name: "PCT FlowOps", category: "Automation", desc: "Low-code workflow engine for finance, HR and procurement automation." },
