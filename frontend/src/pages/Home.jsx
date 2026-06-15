@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import {
-  ArrowRight, ArrowUpRight, Sparkles, Shield, Zap, Globe2, Code2, Brain,
-  Cloud, Smartphone, Database, ShieldCheck, Layers, Compass, Star, Award,
+  ArrowRight, ArrowUpRight, MonitorSmartphone, Sparkles, Shield, Zap, Globe2, Code2, Brain,
+  Cloud, Smartphone, Database, Workflow, Users, Briefcase, ShieldCheck, Layers, Compass, Star, Award,
   Stethoscope, Landmark, ShoppingBag, Factory, Truck, GraduationCap, Building2,
   Plane, Car, Radio, Clapperboard, Sprout, HardHat, Rocket,
 } from "lucide-react";
@@ -59,39 +59,66 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="lg:col-span-7"
             >
-              <Eyebrow>Global IT Consulting · Est. 2024</Eyebrow>
+              <Eyebrow>AI • SOFTWARE • WEB & APP DEVELOPMENT • GLOBAL DELIVERY</Eyebrow>
               <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[-0.005em] leading-[1.02] text-slate-900 text-balance">
-                Build, scale & transform with{" "}
+               We Turn Complex Business Challenges Into {" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">AI-powered</span>
+                  <span className="relative z-10 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent"> Smart Technology </span>
                 </span>{" "}
-                technology solutions.
+              Solutions 
               </h1>
-              <p className="mt-7 text-base lg:text-lg text-slate-600 leading-relaxed max-w-xl">
-                People's Choice Tech helps ambitious businesses ship world-class software, AI,
-                cloud, cybersecurity and digital transformation — with enterprise rigor and
-                startup pace.
+              <p className="mt-7 text-sm lg:text-base text-slate-600 leading-relaxed max-w-xl">
+              People's Choice Tech helps startups, SMEs, and enterprises build AI solutions, custom software, SaaS platforms, web applications, mobile apps, cloud infrastructure, ERP systems, and business automation tools using modern technologies and proven engineering practices. 
               </p>
               <div className="mt-9 flex flex-col sm:flex-row gap-3">
                 <Link to="/contact?type=consultation" data-testid="hero-cta-consult">
-                  <Button className="h-12 rounded-full px-7 bg-slate-950 hover:bg-slate-800 text-white font-bold text-[15px] shadow-xl shadow-slate-900/20 hover:-translate-y-0.5 transition-all">
-                    Book a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button className="h-12 rounded-full px-7 bg-slate-950 hover:bg-slate-800 text-white font-normal text-[14px] shadow-xl shadow-slate-900/20 hover:-translate-y-0.5 transition-all">
+                    Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link to="/contact?type=proposal" data-testid="hero-cta-proposal">
-                  <Button variant="outline" className="h-12 rounded-full px-7 border-2 border-slate-300 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-700 font-bold text-[15px] transition-all">
-                    Get a Proposal
+                  <Button variant="outline" className="h-12 rounded-full px-7 border-2 border-slate-300 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-700 font-normal text-[14px] transition-all">
+                   Book Free Consultation
                   </Button>
                 </Link>
               </div>
 
-              {/* Trust badges */}
-              <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 text-[13px] text-slate-600 font-semibold">
-                <div className="flex items-center gap-2"><Shield className="h-4 w-4 text-emerald-600" /> ISO Aligned</div>
-                <div className="flex items-center gap-2"><Cloud className="h-4 w-4 text-sky-600" /> AWS Cloud Sales Certified</div>
-                <div className="flex items-center gap-2"><Star className="h-4 w-4 text-amber-500" /> 4.9/5 satisfaction</div>
-                <div className="flex items-center gap-2"><Globe2 className="h-4 w-4 text-blue-600" /> 6 global offices</div>
-              </div>
+             {/* Trust badges */}
+<div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3 text-[14px] text-slate-600 font-normal">
+
+    <div className="flex items-center gap-2">
+    <Code2 className="h-4 w-4 text-blue-600" />
+    <span> Support All Tech</span>
+  </div>
+
+<div className="flex items-center gap-2">
+    <Brain className="h-4 w-4 text-purple-600" />
+    <span>AI Solutions</span>
+  </div>
+
+
+  <div className="flex items-center gap-2">
+    <MonitorSmartphone className="h-4 w-4 text-emerald-600" />
+    <span>Web & Mobile Apps</span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <Briefcase className="h-4 w-4 text-amber-500" />
+    <span>Custom Software & SaaS</span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <Workflow className="h-4 w-4 text-cyan-600" />
+    <span>ERP & API Integrations</span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <Users className="h-4 w-4 text-indigo-600" />
+    <span>Dedicated Development Teams</span>
+  </div>
+
+</div>
+
             </motion.div>
 
             <motion.div
@@ -353,7 +380,7 @@ export default function Home() {
                   <div className="flex items-center gap-2 flex-wrap">
                     <div className="text-[11px] uppercase tracking-[0.18em] text-blue-600 font-bold">{c.industry}</div>
                     {c.pctProduct && (
-                      <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-[9.5px] font-bold uppercase tracking-wider">PCT Built</span>
+                      <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-[9.5px] font-bold uppercase tracking-wider">People’s Choice Tech Built</span>
                     )}
                   </div>
                   <h3 className="mt-2 text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-700">{c.title}</h3>
@@ -435,12 +462,12 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
                 <Link to="/contact?type=consultation" data-testid="bottom-cta-consult">
                   <Button className="h-12 rounded-full px-7 bg-white text-slate-900 hover:bg-slate-100 font-semibold w-full sm:w-auto">
-                    Book a Consultation
+                    Start Your Project
                   </Button>
                 </Link>
                 <Link to="/contact?type=proposal" data-testid="bottom-cta-proposal">
                   <Button variant="outline" className="h-12 rounded-full px-7 border-slate-700 text-white bg-transparent hover:bg-slate-900 font-semibold w-full sm:w-auto">
-                    Request Proposal
+                    📅 Book Free Consultation 
                   </Button>
                 </Link>
               </div>
@@ -451,3 +478,5 @@ export default function Home() {
     </div>
   );
 }
+
+

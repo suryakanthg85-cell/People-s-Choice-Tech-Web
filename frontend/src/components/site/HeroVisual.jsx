@@ -1,5 +1,16 @@
 import { motion } from "framer-motion";
-import { Cpu, Brain, Cloud, Shield, Activity, Sparkles, Zap, Code2 } from "lucide-react";
+import {
+ Cpu,
+ Brain,
+ Globe,
+ Code2,
+ AppWindow,
+ Workflow,
+ Activity,
+ Sparkles,
+ Users,
+} from "lucide-react";
+
 
 /**
  * High-tech AI-themed visual for the hero.
@@ -9,12 +20,44 @@ import { Cpu, Brain, Cloud, Shield, Activity, Sparkles, Zap, Code2 } from "lucid
  * - Pure CSS + framer-motion — no images, perfectly crisp at any size.
  */
 export default function HeroVisual() {
-  const cards = [
-    { icon: Brain, label: "AI Agents", sub: "GPT · Claude · Gemini", color: "from-purple-500 to-fuchsia-500", x: "-12%", y: "8%" },
-    { icon: Cloud, label: "Cloud Native", sub: "AWS · Azure · GCP", color: "from-sky-500 to-blue-500", x: "62%", y: "-2%" },
-    { icon: Shield, label: "Zero-Trust", sub: "SOC2 · ISO27001", color: "from-emerald-500 to-teal-500", x: "-2%", y: "65%" },
-    { icon: Code2, label: "Engineering", sub: "Sr. teams · 24×7", color: "from-blue-600 to-indigo-600", x: "68%", y: "58%" },
-  ];
+ const cards = [
+  {
+    icon: Brain,
+    label: "AI Solutions",
+    sub: "GPT · Claude · Gemini · Agents",
+    color: "from-purple-500 to-fuchsia-500",
+    x: "-10%",
+    y: "8%",
+  },
+
+  {
+    icon: Globe,
+    label: "Web & App Development",
+    sub: "WordPress · React · Next.js",
+    color: "from-sky-500 to-blue-500",
+    x: "60%",
+    y: "-2%",
+  },
+
+  {
+    icon: Code2,
+    label: "Custom Software",
+    sub: "SaaS · ERP · CRM",
+    color: "from-emerald-500 to-teal-500",
+    x: "-2%",
+    y: "65%",
+  },
+
+  {
+    icon: Workflow,
+    label: "API & Integrations",
+    sub: "REST · Third-Party · Automation",
+    color: "from-indigo-500 to-violet-500",
+    x: "68%",
+    y: "58%",
+  },
+];
+
 
   return (
     <div className="relative w-full aspect-square max-w-[560px] mx-auto" data-testid="hero-visual">
@@ -50,11 +93,14 @@ export default function HeroVisual() {
           <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-blue-500/30 via-fuchsia-500/20 to-blue-500/20 blur-xl" />
           <div className="absolute inset-6 rounded-full bg-gradient-to-tr from-blue-500/40 via-fuchsia-500/30 to-blue-500/30 blur-md" />
 
-          <div className="relative z-10 text-center">
-            <Cpu className="h-9 w-9 text-blue-400 mx-auto" strokeWidth={1.5} />
-            <div className="mt-2 text-[10px] uppercase tracking-[0.28em] text-slate-400 font-bold">AI Core</div>
-            <div className="text-white font-bold text-lg mt-1">PCT Engine</div>
-          </div>
+          <div className="mt-2 text-[10px] uppercase tracking-[0.28em] text-slate-400 font-bold">
+  People's Choice Tech
+</div>
+
+<div className="text-white font-bold text-xl mt-1">
+  AI • Software • Cloud
+</div>
+
 
           {/* Pulse rings */}
           {[0, 1, 2].map((i) => (
@@ -73,11 +119,31 @@ export default function HeroVisual() {
         <motion.div
           key={c.label}
           initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+          animate={{
+opacity: 1,
+scale: 1,
+y: [0, -10, 0],
+x: [0, 6, 0, -6, 0],
+rotate: [0, 1, 0, -1, 0],
+}} 
           transition={{
             opacity: { duration: 0.5, delay: 0.4 + idx * 0.15 },
             scale: { duration: 0.5, delay: 0.4 + idx * 0.15 },
-            y: { duration: 4 + idx, repeat: Infinity, ease: "easeInOut", delay: idx * 0.3 },
+           y: {
+duration: 6 + idx,
+repeat: Infinity,
+ease: "easeInOut",
+},
+x: {
+duration: 8 + idx,
+repeat: Infinity,
+ease: "easeInOut",
+},
+rotate: {
+duration: 10,
+repeat: Infinity,
+ease: "easeInOut",
+}, 
           }}
           className="absolute"
           style={{ left: c.x, top: c.y }}
@@ -102,7 +168,7 @@ export default function HeroVisual() {
         className="absolute left-[8%] top-[42%] bg-white shadow-xl shadow-slate-900/10 border border-slate-200 rounded-full pl-3 pr-4 py-1.5 flex items-center gap-2"
       >
         <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-        <span className="text-[11px] font-bold text-slate-900">99.99% uptime</span>
+        <span className="text-[11px] font-bold text-slate-900">WordPress • React • Next.js</span>
       </motion.div>
 
       <motion.div
@@ -112,7 +178,7 @@ export default function HeroVisual() {
         className="absolute right-[6%] top-[40%] bg-white shadow-xl shadow-slate-900/10 border border-slate-200 rounded-full pl-3 pr-4 py-1.5 flex items-center gap-2"
       >
         <Activity className="h-3.5 w-3.5 text-blue-600" />
-        <span className="text-[11px] font-bold text-slate-900">12ms latency</span>
+        <span className="text-[11px] font-bold text-slate-900">SaaS • ERP • CRM</span>
       </motion.div>
 
       <motion.div
@@ -122,7 +188,7 @@ export default function HeroVisual() {
         className="absolute left-1/2 -translate-x-1/2 bottom-[6%] bg-white shadow-xl shadow-slate-900/10 border border-slate-200 rounded-full pl-3 pr-4 py-1.5 flex items-center gap-2"
       >
         <Sparkles className="h-3.5 w-3.5 text-purple-500" />
-        <span className="text-[11px] font-bold text-slate-900">GenAI ready</span>
+        <span className="text-[11px] font-bold text-slate-900">Staffing • .Net, React, Golang, WordPress</span>
       </motion.div>
     </div>
   );

@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+backend/leads.json
+backend/newsletter.json
+backend/.env
+frontend/node_modules/
+frontend/build/

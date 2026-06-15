@@ -25,8 +25,8 @@ export const FOUNDERS = [
     role: "Co-Founder & CEO",
     email: "gopal@peopleschoice.tech",
     image:
-      "https://images.unsplash.com/photo-1600878459138-e1123b37cb30?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODEyMTg1NjR8MA&ixlib=rb-4.1.0&q=85",
-    bio: "10+ years across Business Head, Development Head, and Marketing leadership roles. Hands-on with React, Next.js, WordPress and AWS Cloud Sales certified. Drives growth, GTM and customer success at PCT.",
+      "https://media.licdn.com/dms/image/v2/D4D03AQGbMqDIuuzhdw/profile-displayphoto-crop_800_800/B4DZ3P5I5CJsAI-/0/1777309361948?e=1782950400&v=beta&t=umZkteyut8Adbqj3ymCyQydneYCFlVnOBnGbwbLfgFk",
+    bio: "10+ years across Business Development, and Marketing leadership roles. Hands-on with React, Next.js, WordPress and AWS Cloud Sales certified. Drives growth, GTM and customer success at PCT.",
     skills: ["Business Strategy", "React / Next.js", "WordPress", "AWS Cloud Sales", "GTM & Marketing"],
     quote: "Technology should never be a black box — it should be a lever every business can pull with confidence.",
   },
@@ -36,7 +36,7 @@ export const FOUNDERS = [
     role: "Co-Founder & CTO",
     email: "divya@peopleschoice.tech",
     image:
-      "https://images.unsplash.com/photo-1609436132311-e4b0c9370469?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODEyMTg1NjR8MA&ixlib=rb-4.1.0&q=85",
+      "https://media.licdn.com/dms/image/v2/D5603AQFN1KofE_mlKA/profile-displayphoto-crop_800_800/B56Z0GCiuzHwAI-/0/1773922830493?e=1782950400&v=beta&t=3Y93G-xn0n69S6L7J_giokrolcrmJEeHaElhpCsXaCE",
     bio: "10+ years of enterprise engineering experience as a .NET specialist. Ex-Infosys, Cognizant, Datamatics and Clarion — has architected and delivered large-scale apps and software platforms across BFSI and enterprise.",
     skills: [".NET / C#", "Enterprise Architecture", "SQL Server", "Azure", "Software Delivery"],
     quote: "Great engineering is invisible — it shows up as a product that just works, scales and never lets the customer down.",
