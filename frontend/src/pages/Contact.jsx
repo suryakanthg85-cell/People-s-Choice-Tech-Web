@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { useState, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
@@ -58,6 +59,13 @@ export default function Contact() {
   const headline = useMemo(() => meta.title, [meta]);
 
   return (
+<>
+<SEO
+  title="Contact Us | People's Choice Tech"
+  description="Get in touch with People's Choice Tech for Website Development, Software Development, AI Solutions and IT Staffing services."
+  keywords="contact people's choice tech, software company contact, website development company contact"
+  url="https://peopleschoice.tech/contact"
+/>
     <div>
       <section className="relative pt-20 pb-12 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -208,5 +216,6 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  );
+</> 
+ );
 }

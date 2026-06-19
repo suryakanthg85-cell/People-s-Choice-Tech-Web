@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { TECH_STACK } from "@/lib/data";
@@ -16,6 +17,13 @@ const CATEGORY_COLORS = {
 
 export default function Technologies() {
   return (
+<>
+<SEO
+  title="Technologies | React, .NET, WordPress, AI, AWS, Azure"
+  description="Our expertise includes React, Node.js, .NET, Golang, Java, Python, WordPress, AWS, Azure, Google Cloud and AI."
+  keywords="react developers, .net developers, wordpress developers, aws developers, golang developers, AI developers"
+  url="https://peopleschoice.tech/technologies"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -68,5 +76,6 @@ export default function Technologies() {
         </div>
       </section>
     </div>
+</>
   );
 }

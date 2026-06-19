@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { useParams, Navigate, Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { INDUSTRIES, CASE_STUDIES, SERVICES } from "@/lib/data";

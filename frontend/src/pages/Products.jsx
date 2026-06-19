@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { PRODUCTS } from "@/lib/data";
@@ -9,6 +10,13 @@ export default function Products() {
   const rest = PRODUCTS.filter((p) => !p.designedByPCT);
 
   return (
+<>
+<SEO
+  title="Products | People's Choice Tech"
+  description="Discover SaaS products and digital platforms developed by People's Choice Tech."
+  keywords="saas products, software products, custom platforms, AI products"
+  url="https://peopleschoice.tech/products"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -115,5 +123,6 @@ export default function Products() {
         </div>
       </section>
     </div>
+</>
   );
 }

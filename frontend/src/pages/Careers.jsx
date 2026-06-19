@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { JOBS } from "@/lib/data";
@@ -12,6 +13,13 @@ const BENEFITS = [
 
 export default function Careers() {
   return (
+<>
+<SEO
+  title="Careers | People's Choice Tech"
+  description="Join People's Choice Tech and work on Website Development, AI, Cloud and Enterprise Software projects."
+  keywords="software jobs, react jobs, .net jobs, AI jobs, careers in IT"
+  url="https://peopleschoice.tech/careers"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -77,5 +85,6 @@ export default function Careers() {
         </div>
       </section>
     </div>
+</>
   );
 }

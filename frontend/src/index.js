@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "@/index.css";
 import App from "@/App";
+import { HelmetProvider } from "react-helmet-async";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,4 +21,9 @@ root.render(
       <App />
     </QueryClientProvider>
   </React.StrictMode>,
+);
+root.render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
 );

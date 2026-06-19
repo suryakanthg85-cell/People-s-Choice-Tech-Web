@@ -1,9 +1,17 @@
+import SEO from "../components/site/SEO";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { RESOURCES } from "@/lib/data";
 import { Clock } from "lucide-react";
 
 export default function Resources() {
   return (
+<>
+<SEO
+  title="Resources & Blogs | People's Choice Tech"
+  description="Insights on Website Development, Software Engineering, AI, Cloud, Cybersecurity and Technology Trends."
+  keywords="technology blog, software blog, AI blog, website development articles"
+  url="https://peopleschoice.tech/resources"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -49,5 +57,6 @@ export default function Resources() {
         </div>
       </section>
     </div>
-  );
+</> 
+ );
 }

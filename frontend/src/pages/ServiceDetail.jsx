@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { useParams, Link, Navigate } from "react-router-dom";
 import {
   Code2, Brain, Cloud, Smartphone, Database, ShieldCheck, Layers, Compass,

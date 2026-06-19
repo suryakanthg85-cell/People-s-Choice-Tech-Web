@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { STAFFING } from "@/lib/data";
@@ -6,6 +7,13 @@ import { Users, Clock, Globe2, Check, ArrowRight } from "lucide-react";
 
 export default function Staffing() {
   return (
+<>
+<SEO
+  title="IT Staffing & Dedicated Developers | People's Choice Tech"
+  description="Hire dedicated developers and build offshore teams with experts in React, .NET, WordPress, Java, Python, Golang and AI."
+  keywords="hire developers, IT staffing, offshore development center, dedicated developers, react developers"
+  url="https://peopleschoice.tech/staffing"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -81,5 +89,6 @@ export default function Staffing() {
         </div>
       </section>
     </div>
-  );
+</> 
+ );
 }

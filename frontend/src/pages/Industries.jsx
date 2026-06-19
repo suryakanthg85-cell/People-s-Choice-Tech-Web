@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { INDUSTRIES } from "@/lib/data";
@@ -5,6 +6,13 @@ import { ArrowRight } from "lucide-react";
 
 export default function Industries() {
   return (
+<>
+<SEO
+  title="Industries We Serve | People's Choice Tech"
+  description="We build technology solutions for Banking, Healthcare, Retail, Manufacturing, Logistics and Startups."
+  keywords="banking software development, healthcare software development, retail software, manufacturing software"
+  url="https://peopleschoice.tech/industries"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -39,5 +47,6 @@ export default function Industries() {
         </div>
       </section>
     </div>
+</>
   );
 }

@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Target, Eye, Heart, Globe2 } from "lucide-react";
@@ -16,6 +17,13 @@ const VALUES = [
 
 export default function About() {
   return (
+<>
+<SEO
+  title="About Us | People's Choice Tech"
+  description="Meet People's Choice Tech founders and senior engineers with expertise in .NET, WordPress, React, AI, Cloud and Enterprise Software Development."
+  keywords="about people's choice tech, software company founders, IT company India, website development company"
+  url="https://peopleschoice.tech/about"
+/>
     <div>
       <section className="relative pt-20 pb-20 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -148,5 +156,6 @@ export default function About() {
         </div>
       </section>
     </div>
-  );
+</> 
+ );
 }

@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
@@ -47,6 +48,13 @@ const Eyebrow = ({ children }) => (
 
 export default function Home() {
   return (
+<>
+  <SEO
+    title="People's Choice Tech | AI, Software, Website & App Development Company"
+    description="People's Choice Tech provides Website Development, Custom Software Development, Mobile Apps, AI Solutions, Cloud Services, Cybersecurity and IT Staffing globally."
+    keywords="website development company, software development company, AI development company, mobile app development company, wordpress development, react development, cloud services, IT staffing"
+    url="https://peopleschoice.tech"
+  />
     <div>
       {/* HERO */}
       <section className="relative pt-12 lg:pt-20 pb-24 lg:pb-32 overflow-hidden" data-testid="hero-section">
@@ -476,7 +484,8 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+</> 
+ );
 }
 
 

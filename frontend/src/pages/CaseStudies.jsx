@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { CASE_STUDIES } from "@/lib/data";
@@ -6,6 +7,13 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 
 export default function CaseStudies() {
   return (
+<>
+<SEO
+  title="Case Studies | People's Choice Tech"
+  description="Explore real-world software, cloud and AI transformation projects delivered by People's Choice Tech."
+  keywords="software case studies, website case studies, AI projects, cloud projects"
+  url="https://peopleschoice.tech/case-studies"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -71,5 +79,6 @@ export default function CaseStudies() {
         </div>
       </section>
     </div>
-  );
+</> 
+ );
 }

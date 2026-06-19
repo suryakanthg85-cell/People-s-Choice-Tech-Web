@@ -1,3 +1,4 @@
+import SEO from "../components/site/SEO";
 import { Link } from "react-router-dom";
 import {
   Code2, Brain, Cloud, Smartphone, Database, ShieldCheck, Layers, Compass,
@@ -11,6 +12,13 @@ const ICONS = { Code2, Brain, Cloud, Smartphone, Database, ShieldCheck, Layers, 
 
 export default function Services() {
   return (
+<>
+<SEO
+  title="IT Services | Website, Software, AI & Cloud Solutions"
+  description="Explore Website Development, Custom Software Development, Mobile Apps, AI Solutions, Cloud Services and Cybersecurity services."
+  keywords="IT services, software services, website development services, AI services, app development company"
+  url="https://peopleschoice.tech/services"
+/>
     <div>
       <section className="relative pt-20 pb-16 overflow-hidden">
         <GradientBlobs variant="page" />
@@ -72,5 +80,6 @@ export default function Services() {
         </div>
       </section>
     </div>
+</>
   );
 }
