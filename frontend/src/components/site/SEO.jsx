@@ -265,6 +265,10 @@ export default function SEO({
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={url} />
       <meta name="theme-color" content="#0f172a" />
+      <meta
+  name="google-site-verification"
+  content="USJPmqXjykySDxiC__7NKXTbAk_dw84VCKtf2ZcYjqc"
+/>
 
       {/* 2. Crawling & Indexing */}
       <meta name="robots" content="index,follow,max-image-preview:large" />
