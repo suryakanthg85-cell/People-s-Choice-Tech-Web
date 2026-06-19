@@ -8,15 +8,15 @@ const COMPANY = {
   logo: "https://peopleschoice.tech/logo.png",
   image: "https://peopleschoice.tech/images/og-image-1200x630.png",
   email: "hello@peopleschoice.tech",
-  phone: "+91-0000000000", // Update with actual phone
+  phone: "+91-8275439584", /
   description:
     "People's Choice Tech helps startups and enterprises build AI solutions, SaaS products, websites, mobile apps, ERP, CRM, cloud platforms, DevOps, and dedicated development teams worldwide.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Pune",
-    addressLocality: "Pune",
+    streetAddress: "304, Hazel One",
+    addressLocality: "Hinjewadi Phase 1, Pune",
     addressRegion: "MH",
-    postalCode: "411001", // Update with actual PIN
+    postalCode: "411057", 
     addressCountry: "IN",
   },
   geo: {
@@ -87,7 +87,7 @@ export default function SEO({
     },
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication", // Alternatively LocalBusiness or SoftwareCompany extension
+      "@type": "SoftwareCompany", // Alternatively LocalBusiness or SoftwareCompany extension
       additionalType: "http://www.productontology.org/id/Software_company",
       name: COMPANY.name,
       image: COMPANY.logo,
