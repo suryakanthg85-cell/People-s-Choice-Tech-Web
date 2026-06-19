@@ -2,12 +2,60 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, Globe, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import {
+  FaLinkedinIn,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaGithub,
+  FaXTwitter,
+  FaWhatsapp,
+} from "react-icons/fa6";
+
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { COMPANY, SERVICES, INDUSTRIES } from "../../lib/data";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+
+const SOCIALS = [
+  {
+    icon: FaLinkedinIn,
+    href: "https://linkedin.com/company/people-s-choice-tech",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaGithub,
+    href: "https://github.com/suryakanthg85-cell",
+    label: "GitHub",
+  },
+  {
+    icon: FaWhatsapp,
+    href: "https://wa.me/1234567890", // Replace with your actual WhatsApp number/link
+    label: "WhatsApp",
+  },
+  {
+    icon: FaFacebookF,
+    href: "https://facebook.com/peopleschoicetech",
+    label: "Facebook",
+  },
+  {
+    icon: FaInstagram,
+    href: "https://instagram.com/peopleschoicetech",
+    label: "Instagram",
+  },
+  {
+    icon: FaXTwitter,
+    href: "https://x.com/peopleschoicetech",
+    label: "X (Twitter)",
+  },
+  {
+    icon: FaYoutube,
+    href: "https://youtube.com/@peopleschoicetech",
+    label: "YouTube",
+  },
+];
 
 const SECTIONS = [
   {
@@ -120,6 +168,7 @@ export default function Footer() {
               An emerging global technology partner — software, AI, cloud, cybersecurity,
               staffing & digital transformation, delivered with enterprise rigor and startup pace.
             </p>
+            
             <div className="mt-6 space-y-2.5 text-[14px]">
               <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2.5 text-slate-100 hover:text-blue-400 transition-colors" data-testid="footer-email">
                 <Mail className="h-4 w-4 text-blue-400" /> {COMPANY.email}
@@ -131,18 +180,30 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 text-blue-400 mt-0.5" /> {COMPANY.hq}
               </div>
             </div>
-            <div className="flex gap-3 mt-6">
-              {[Globe, MessageCircle, Send].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="h-10 w-10 rounded-full border border-slate-700 grid place-items-center text-slate-100 hover:bg-blue-500 hover:border-blue-600 hover:text-white hover:-translate-y-1 transition-all"
-                  data-testid={`footer-social-${i}`}
-                  aria-label="Social link"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+
+            {/* Social Icons Section */}
+            <div className="mt-8">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-blue-400 font-bold mb-4">
+                Follow Us
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {SOCIALS.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Follow us on ${social.label}`}
+                      title={social.label}
+                      className="h-10 w-10 rounded-full border border-slate-700 bg-slate-900/50 flex items-center justify-center text-slate-300 hover:bg-blue-600 hover:border-blue-500 hover:text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                    >
+                      <Icon className="text-[1.1rem]" />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -171,7 +232,7 @@ export default function Footer() {
             Global Offices
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {COMPANY.offices.map((o) => (
+            {COMPANY.offices?.map((o) => (
               <div key={o.city} className="text-sm group cursor-default">
                 <div className="text-white font-bold group-hover:text-blue-400 transition-colors">{o.city}</div>
                 <div className="text-slate-300 text-[12px]">{o.country} · {o.tz}</div>
@@ -180,6 +241,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Copyright & Legal */}
         <div className="mt-12 pt-6 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-slate-300">
           <div>© {new Date().getFullYear()} People's Choice Tech. All rights reserved.</div>
           <div className="flex gap-5">
@@ -192,3 +254,4 @@ export default function Footer() {
     </footer>
   );
 }
+
