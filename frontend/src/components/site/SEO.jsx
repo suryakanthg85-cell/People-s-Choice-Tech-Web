@@ -23,19 +23,77 @@ const COMPANY = {
     latitude: "18.5204",
     longitude: "73.8567",
   },
-  founders: [{ "@type": "Person", name: "Suryakanth" }],
+  founders:[
+{
+ "@type":"Person",
+ name:"Gopal Giri"
+},
+{
+ "@type":"Person",
+ name:"Divya Bharti"
+}
+]
+    
   socials: [
-    "https://linkedin.com/company/people-s-choice-tech",
-    "https://github.com/suryakanthg85-cell",
-    "https://facebook.com/peopleschoicetech",
-    "https://instagram.com/peopleschoicetech",
-    "https://x.com/peopleschoicetech",
-    "https://youtube.com/@peopleschoicetech",
+    "https://www.linkedin.com/company/people-s-choice-tech/",
+    "https://www.facebook.com/profile.php?id=61584707083007",
+    "https://www.instagram.com/trackthebreach/",
+    "https://x.com/people_s_choice",
+    "https://www.youtube.com/channel/UC8Obrexiq8OxyR6VcVtpoyA",
   ],
 };
 
 const DEFAULT_KEYWORDS =
-  "AI Development Company, Software Development Company, Custom Software Development, Web Development, App Development, Cloud Consulting, Digital Transformation, DevOps, ERP, CRM, React, Next.js, .NET, AWS, Azure, Dedicated Developers, IT Staffing";
+  "AI Development Company,
+  Free Website Development,
+  Budget Friendly Software,
+  Best Software Company in Pune,
+  Track The Breach Development
+SaaS Development,
+  WordPress Development,
+  Dotnet Development,
+  .net Development,
+Free App Development,
+Software Development Company,
+Custom Software Development,
+Website Development,
+Web Development,
+Mobile App Development,
+React Development,
+Next.js Development,
+.NET Development,
+Node.js Development,
+Python Development,
+Cloud Consulting,
+AWS,
+Azure,
+Google Cloud,
+DevOps,
+ERP Development,
+CRM Development,
+IT Consulting,
+IT Outsourcing,
+Dedicated Developers,
+Staff Augmentation,
+Enterprise Software,
+Healthcare Software,
+FinTech Software,
+Retail Software,
+Ecommerce Development,
+SaaS Development,
+Product Development,
+Generative AI,
+LLM Development,
+AI Chatbots,
+AI Agents,
+Automation,
+Digital Transformation,
+India,
+Pune,
+Mumbai,
+Bangalore,
+USA,
+UK";
 
 export default function SEO({
   title,
@@ -52,8 +110,8 @@ export default function SEO({
 }) {
   // Format Title Dynamically
   const formattedTitle = title
-    ? `${title} | AI & Software Development Company`
-    : `${COMPANY.name} | AI & Software Development Company`;
+    ? `${title} | Software, Website, App & AI Product Development Company`
+    : `${COMPANY.name} | Software, Website, App & AI Product Development Company`;
 
   // Base Schemas that apply to every page
   const schemas = [
@@ -150,10 +208,28 @@ export default function SEO({
         "@type": "Organization",
         name: COMPANY.name,
       },
-      areaServed: {
-        "@type": "Country",
-        name: "Worldwide",
-      },
+      areaServed:[
+{
+"@type":"Country",
+"name":"India"
+},
+{
+"@type":"Country",
+"name":"United States"
+},
+{
+"@type":"Country",
+"name":"United Kingdom"
+},
+{
+"@type":"Country",
+"name":"Canada"
+},
+{
+"@type":"Country",
+"name":"Australia"
+}
+]
     });
   }
 
@@ -227,6 +303,39 @@ export default function SEO({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+      <meta httpEquiv="content-language" content="en"/>
+
+      <meta
+name="viewport"
+content="width=device-width,initial-scale=1"
+/>
+      <meta charset="utf-8">
+        <meta
+name="format-detection"
+content="telephone=no"
+/>
+        <meta
+name="application-name"
+content="People's Choice Tech"
+/>
+        <meta
+name="apple-mobile-web-app-title"
+content="People's Choice Tech"
+/>
+
+        <meta
+name="apple-mobile-web-app-capable"
+content="yes"
+/>
+        <meta
+name="mobile-web-app-capable"
+content="yes"
+/>
+        <meta
+name="google-site-verification"
+content="YOUR_CODE"
+/>
 
       {/* 8. JSON-LD Structured Data */}
       <script type="application/ld+json">
