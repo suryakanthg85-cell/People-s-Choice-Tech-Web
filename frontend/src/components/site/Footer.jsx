@@ -27,17 +27,17 @@ const SOCIALS = [
   },
   {
     icon: FaGithub,
-    href: "https://github.com/suryakanthg85-cell",
+    href: "https://github.com/",
     label: "GitHub",
   },
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/1234567890", // Replace with your actual WhatsApp number/link
+    href: "https://wa.me/8275439584", // Replace with your actual WhatsApp number/link
     label: "WhatsApp",
   },
   {
     icon: FaFacebookF,
-    href: "https://facebook.com/peopleschoicetech",
+    href: "https://www.facebook.com/profile.php?id=61584707083007",
     label: "Facebook",
   },
   {
