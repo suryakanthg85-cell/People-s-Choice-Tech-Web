@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center group shrink-0" data-testid="logo-link">
           <img
-            src="https://customer-assets.emergentagent.com/job_pct-enterprise/artifacts/lp5jwh1s_Track_The_Breach_blue_Logo_1__2_-removebg-preview.png"
+            src="/logo.png"
             alt="People's Choice Tech"
             className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
           />

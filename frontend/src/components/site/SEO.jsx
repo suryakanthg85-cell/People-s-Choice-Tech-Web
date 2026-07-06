@@ -306,7 +306,7 @@ export default function SEO({
 
       {/* 7. Performance & Assets */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
+      <link rel="apple-touch-icon" href="/logo.png" />
       <link rel="preload" as="image" href="/logo.png" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
