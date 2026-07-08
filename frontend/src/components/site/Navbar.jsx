@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* Logo */}
 <Link to="/">
   <img
-    src="/logo.png"
+    src="/new-logo.png"
     alt="People's Choice Tech"
     className="h-10 w-auto"
   />

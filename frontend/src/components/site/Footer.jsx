@@ -159,7 +159,7 @@ export default function Footer() {
           <div className="col-span-2">
             <Link to="/" className="inline-flex items-center bg-white rounded-2xl px-4 py-2.5 shadow-lg shadow-slate-900/15 group hover:scale-105 transition-transform duration-300" data-testid="footer-logo">
               <img
-                src="/logo.png"
+                src="/new-logo.png"
                 alt="People's Choice Tech"
                 className="h-8 w-auto object-contain"
               />
