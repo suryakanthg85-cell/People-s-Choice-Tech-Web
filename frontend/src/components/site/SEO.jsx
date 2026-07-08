@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet-async";
 // Core Company Information (Edit these details to match your exact data)
 const COMPANY = {
   name: "People's Choice Tech",
-  legalName: "People's Choice Tech Pvt. Ltd.",
+  legalName: "Jivyagiri Enterprises Pvt. Ltd.",
   url: "https://peopleschoice.tech",
   logo: "https://peopleschoice.tech/logo.png",
   image: "https://peopleschoice.tech/images/og-image-1200x630.png",
   email: "hello@peopleschoice.tech",
-  phone: "+91-8275439584", /
+  phone: "+91-8275439584", 
   description:
     "People's Choice Tech helps startups and enterprises build AI solutions, SaaS products, websites, mobile apps, ERP, CRM, cloud platforms, DevOps, and dedicated development teams worldwide.",
   address: {
@@ -23,16 +23,16 @@ const COMPANY = {
     latitude: "18.5204",
     longitude: "73.8567",
   },
-  founders:[
-{
- "@type":"Person",
- name:"Gopal Giri"
-},
-{
- "@type":"Person",
- name:"Divya Bharti"
-}
-]
+  founders: [
+    {
+      "@type": "Person",
+      name: "Gopal Giri"
+    },
+    {
+      "@type": "Person",
+      name: "Divya Bharti"
+    }
+  ],
     
   socials: [
     "https://www.linkedin.com/company/people-s-choice-tech/",
@@ -43,16 +43,24 @@ const COMPANY = {
   ],
 };
 
-const DEFAULT_KEYWORDS =
-  "AI Development Company,
-  Free Website Development,
-  Budget Friendly Software,
-  Best Software Company in Pune,
-  Track The Breach Development
+const DEFAULT_KEYWORDS = `
+AI Development Company,
+Free website,
+Free Mobile App Development,
+Track The Breach,
+Trackthebreach,
+Dot Net,
+.net,
+Dot Net Development,
+Free Maintenance,
+Free Website Development,
+Budget Friendly Software,
+Best Software Company in Pune,
+Track The Breach Development,
 SaaS Development,
-  WordPress Development,
-  Dotnet Development,
-  .net Development,
+WordPress Development,
+Dotnet Development,
+.NET Development,
 Free App Development,
 Software Development Company,
 Custom Software Development,
@@ -61,7 +69,6 @@ Web Development,
 Mobile App Development,
 React Development,
 Next.js Development,
-.NET Development,
 Node.js Development,
 Python Development,
 Cloud Consulting,
@@ -80,7 +87,6 @@ Healthcare Software,
 FinTech Software,
 Retail Software,
 Ecommerce Development,
-SaaS Development,
 Product Development,
 Generative AI,
 LLM Development,
@@ -93,7 +99,8 @@ Pune,
 Mumbai,
 Bangalore,
 USA,
-UK";
+UK
+`;
 
 export default function SEO({
   title,
@@ -208,28 +215,28 @@ export default function SEO({
         "@type": "Organization",
         name: COMPANY.name,
       },
-      areaServed:[
-{
-"@type":"Country",
-"name":"India"
-},
-{
-"@type":"Country",
-"name":"United States"
-},
-{
-"@type":"Country",
-"name":"United Kingdom"
-},
-{
-"@type":"Country",
-"name":"Canada"
-},
-{
-"@type":"Country",
-"name":"Australia"
-}
-]
+      areaServed: [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        }
+      ]
     });
   }
 
@@ -266,9 +273,9 @@ export default function SEO({
       <link rel="canonical" href={url} />
       <meta name="theme-color" content="#0f172a" />
       <meta
-  name="google-site-verification"
-  content="USJPmqXjykySDxiC__7NKXTbAk_dw84VCKtf2ZcYjqc"
-/>
+        name="google-site-verification"
+        content="USJPmqXjykySDxiC__7NKXTbAk_dw84VCKtf2ZcYjqc"
+      />
 
       {/* 2. Crawling & Indexing */}
       <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -308,38 +315,16 @@ export default function SEO({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
-      <meta httpEquiv="content-language" content="en"/>
+      <meta httpEquiv="content-language" content="en" />
 
-      <meta
-name="viewport"
-content="width=device-width,initial-scale=1"
-/>
-      <meta charset="utf-8">
-        <meta
-name="format-detection"
-content="telephone=no"
-/>
-        <meta
-name="application-name"
-content="People's Choice Tech"
-/>
-        <meta
-name="apple-mobile-web-app-title"
-content="People's Choice Tech"
-/>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta charSet="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="application-name" content="People's Choice Tech" />
+      <meta name="apple-mobile-web-app-title" content="People's Choice Tech" />
 
-        <meta
-name="apple-mobile-web-app-capable"
-content="yes"
-/>
-        <meta
-name="mobile-web-app-capable"
-content="yes"
-/>
-        <meta
-name="google-site-verification"
-content="YOUR_CODE"
-/>
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="mobile-web-app-capable" content="yes" />
 
       {/* 8. JSON-LD Structured Data */}
       <script type="application/ld+json">
