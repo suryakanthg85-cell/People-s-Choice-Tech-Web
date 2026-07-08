@@ -14,7 +14,7 @@ import {
 import { COMPANY, SERVICES } from "@/lib/data";
 import { Mail, Phone, MapPin, CheckCircle2 } from "lucide-react";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "/api";
 
 const TYPES = {
   contact: { title: "Contact us", subtitle: "Drop us a line. We read every message." },

@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
+from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 import asyncio
@@ -16,6 +17,9 @@ from datetime import datetime, timezone
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
+mongo_url = os.environ['MONGO_URL']
+client = AsyncIOMotorClient(mongo_url)
+db = client[os.environ['DB_NAME']]
 
 # Gmail SMTP config
 SMTP_HOST = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
@@ -157,49 +161,30 @@ async def health():
     return {"status": "healthy", "email_enabled": EMAIL_ENABLED, "recipients": len(NOTIFY_EMAILS)}
 
 
-
 @api_router.post("/submissions", response_model=ContactSubmission)
 async def create_submission(payload: ContactCreate):
     sub = ContactSubmission(**payload.model_dump())
-    await _send_notification(sub)
+    await db.submissions.insert_one(sub.model_dump())
+    asyncio.create_task(_send_notification(sub))
     return sub
 
 
-
-
-@api_router.get("/submissions")
-async def list_submissions():
-    return {
-        "message":"MongoDB removed. Submissions are sent directly to email."
-    }
-
-
+@api_router.get("/submissions", response_model=List[ContactSubmission])
+async def list_submissions(type: Optional[str] = None, limit: int = 100):
+    query = {"type": type} if type else {}
+    docs = await db.submissions.find(query, {"_id": 0}).sort("created_at", -1).to_list(limit)
+    return docs
 
 
 @api_router.post("/newsletter")
 async def newsletter_signup(payload: NewsletterSignup):
-
-    body=f"""
-New Newsletter Subscription
-
-Email: {payload.email}
-"""
-
-    try:
-        await asyncio.to_thread(
-            send_email,
-            NOTIFY_EMAILS,
-            "Newsletter Signup",
-            body
-        )
-    except Exception as e:
-        logging.exception(e)
-
-    return {
-        "status":"subscribed",
-        "email":payload.email
+    doc = {
+        "id": str(uuid.uuid4()),
+        "email": payload.email,
+        "created_at": _utcnow_iso(),
     }
-
+    await db.newsletter.update_one({"email": payload.email}, {"$set": doc}, upsert=True)
+    return {"status": "subscribed", "email": payload.email}
 
 
 app.include_router(api_router)
@@ -213,4 +198,6 @@ app.add_middleware(
 )
 
 
-
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    client.close()
