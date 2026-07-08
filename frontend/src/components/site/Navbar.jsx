@@ -52,14 +52,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center group shrink-0" data-testid="logo-link">
-          <img
-            src="https://customer-assets.emergentagent.com/job_pct-enterprise/artifacts/lp5jwh1s_Track_The_Breach_blue_Logo_1__2_-removebg-preview.png"
-            alt="People's Choice Tech"
-            className="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
-          />
-        </Link>
-
+<Link to="/">
+  <img
+    src="/logo.png"
+    alt="People's Choice Tech"
+    className="h-10 w-auto"
+  />
+</Link>
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-0.5">
           {NAV.map((item) => (
