@@ -9,8 +9,8 @@ export const COMPANY = {
   phone: "+91 8275439584",
   hq: "304, Hazel One, Hinjewadi Phase 1, Pune",
   offices: [
-    { city: "Nashik", country: "India", tz: "IST" },
-    { city: "Ahmednagar", country: "India", tz: "IST" },
+    { city: "Pune", country: "India", tz: "IST" },
+    { city: "Mumbai", country: "India", tz: "IST" },
     { city: "Bengaluru", country: "India", tz: "IST" },
     { city: "New York", country: "USA", tz: "EST" },
     { city: "London", country: "UK", tz: "GMT" },
