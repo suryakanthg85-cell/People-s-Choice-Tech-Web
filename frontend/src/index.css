@@ -78,9 +78,6 @@
   vertical-align: middle;
 }
 
-/* Hide Emergent platform badge */
-#emergent-badge { display: none !important; }
-
 /* Soften heading weights & add measured letter-spacing for premium feel */
 h1 { font-weight: 800; letter-spacing: -0.01em; word-spacing: 0.04em; }
 h2 { font-weight: 700; letter-spacing: -0.005em; word-spacing: 0.03em; }

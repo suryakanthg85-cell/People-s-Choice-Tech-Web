@@ -116,7 +116,6 @@
         );
     </script>
 
-    <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
 </head>
 
 <body>
@@ -213,61 +212,5 @@
         );
     </script>
 
-    <script>
-        (function () {
-            function removeBadge() {
-                var el =
-                    document.getElementById(
-                        "emergent-badge"
-                    );
-
-                if (el && el.parentNode) {
-                    el.parentNode.removeChild(el);
-                }
-            }
-
-            removeBadge();
-
-            if (
-                document.readyState !==
-                "loading"
-            ) {
-                setTimeout(removeBadge, 0);
-                setTimeout(removeBadge, 500);
-                setTimeout(removeBadge, 1500);
-            } else {
-                document.addEventListener(
-                    "DOMContentLoaded",
-                    function () {
-                        removeBadge();
-                        setTimeout(
-                            removeBadge,
-                            500
-                        );
-                    }
-                );
-            }
-
-            if (
-                typeof MutationObserver !==
-                "undefined"
-            ) {
-                var obs =
-                    new MutationObserver(
-                        function () {
-                            removeBadge();
-                        }
-                    );
-
-                obs.observe(
-                    document.documentElement,
-                    {
-                        childList: true,
-                        subtree: true,
-                    }
-                );
-            }
-        })();
-    </script>
 </body>
 </html>
