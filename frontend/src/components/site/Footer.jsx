@@ -32,7 +32,7 @@ const SOCIALS = [
   },
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/8275439584", // Replace with your actual WhatsApp number/link
+    href: "https://wa.me/919604335705", // Replace with your actual WhatsApp number/link
     label: "WhatsApp",
   },
   {

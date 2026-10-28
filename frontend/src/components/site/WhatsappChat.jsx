@@ -8,7 +8,7 @@ import { MessageCircle, X, Send } from "lucide-react";
  * - Click to open a small panel with quick message + Start Chat CTA
  * - Opens WhatsApp Web/app with prefilled message
  */
-const PHONE = "918275439584"; // +91 8275439584 — international format, no +
+const PHONE = "919604335705"; // +91 9604335705 — international format, no +
 const DEFAULT_MSG =
   "Hi People's Choice Tech 👋 I'd like to chat about a project / quote. Could you help?";
 

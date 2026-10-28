@@ -6,8 +6,8 @@ export const COMPANY = {
   short: "PCT",
   tagline: "Build, Scale & Transform with AI-Powered Technology Solutions",
   email: "hello@peopleschoice.tech",
-  phone: "+91 8275439584",
-  hq: "304, Hazel One, Hinjewadi Phase 1, Pune",
+  phone: "+91 9604335705",
+  hq: "Hinjewadi Phase 1, Pune, Maharashtra, India",
   offices: [
     { city: "Pune", country: "India", tz: "IST" },
     { city: "Mumbai", country: "India", tz: "IST" },
