@@ -8,12 +8,11 @@ const COMPANY = {
   logo: "https://peopleschoice.tech/logo.png",
   image: "https://peopleschoice.tech/images/og-image-1200x630.png",
   email: "hello@peopleschoice.tech",
-  phone: "+91-8275439584",
+  phone: "+91-9604335705",
   description:
     "People's Choice Tech helps startups and enterprises build AI solutions, SaaS products, websites, mobile apps, ERP, CRM, cloud platforms, DevOps, and dedicated development teams worldwide.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "304, Hazel One",
     addressLocality: "Hinjewadi Phase 1, Pune",
     addressRegion: "MH",
     postalCode: "411057",
