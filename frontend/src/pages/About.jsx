@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, Target, Eye, Heart, Globe2 } from "lucide-react";
 import GradientBlobs from "@/components/site/GradientBlobs";
 import { Button } from "@/components/ui/button";
-import { COMPANY, FOUNDERS, STATS } from "@/lib/data";
+import { COMPANY, STATS } from "@/lib/data";
 
 const VALUES = [
   { title: "Innovation First", desc: "We lead with curiosity and bold engineering choices." },
@@ -20,8 +20,8 @@ export default function About() {
 <>
 <SEO
   title="About Us | People's Choice Tech"
-  description="Meet People's Choice Tech founders and senior engineers with expertise in .NET, WordPress, React, AI, Cloud and Enterprise Software Development."
-  keywords="about people's choice tech, software company founders, IT company India, website development company"
+  description="Learn about People's Choice Tech and our expertise in .NET, WordPress, React, AI, Cloud and enterprise software development."
+  keywords="about People's Choice Tech, software development company India, website development company"
   url="https://peopleschoice.tech/about"
 />
     <div>
@@ -30,12 +30,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">About People's Choice Tech</div>
           <h1 className="mt-6 text-5xl lg:text-6xl font-bold tracking-[-0.005em] leading-[1.05] text-slate-900 max-w-4xl">
-            An emerging global technology company, founded by people who built at the world's largest IT firms.
+            An emerging global technology company delivering modern software and digital solutions.
           </h1>
           <p className="mt-6 text-lg text-slate-600 max-w-2xl">
-            Two leaders with 10+ years each at Infosys, Cognizant, Datamatics and Clarion came together to
-            build something different — enterprise-grade delivery with the speed, transparency and care
-            of a tight-knit team.
+            We combine enterprise-grade engineering with the speed, transparency and care of a dedicated technology team.
           </p>
         </div>
       </section>
@@ -67,37 +65,6 @@ export default function About() {
               <p className="mt-2 text-slate-600">{b.desc}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Founders */}
-      <section id="founders" className="py-24 bg-slate-50/60 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <div className="text-[11px] uppercase tracking-[0.24em] text-blue-600 font-bold eyebrow-line">Founders</div>
-            <h2 className="mt-5 text-4xl lg:text-5xl font-bold tracking-[-0.005em] text-slate-900">Led by builders. Backed by experience.</h2>
-          </div>
-          <div className="mt-12 grid md:grid-cols-2 gap-6">
-            {FOUNDERS.map((f) => (
-              <div key={f.slug} className="bg-white p-7 rounded-2xl border border-slate-200" data-testid={`about-founder-${f.slug}`}>
-                <div className="flex items-start gap-5">
-                  <img src={f.image} alt={f.name} className="h-24 w-24 rounded-2xl object-cover" />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-900">{f.name}</h3>
-                    <div className="text-blue-600 font-semibold text-sm">{f.role}</div>
-                    <a href={`mailto:${f.email}`} className="text-[13px] text-slate-500 hover:text-slate-900 mt-1 inline-block">{f.email}</a>
-                  </div>
-                </div>
-                <p className="mt-5 text-slate-600 leading-relaxed">{f.bio}</p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {f.skills.map((s) => (
-                    <span key={s} className="text-[11.5px] font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">{s}</span>
-                  ))}
-                </div>
-                <div className="mt-5 pt-5 border-t border-slate-100 italic text-slate-700">"{f.quote}"</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

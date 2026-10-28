@@ -18,27 +18,6 @@ export const COMPANY = {
   ],
 };
 
-export const FOUNDERS = [
-  {
-    slug: "gopal-giri",
-    name: "Gopal Giri",
-    role: "Co-Founder & CEO",
-    email: "gopal@peopleschoice.tech",
-    bio: "10+ years across Business Development, and Marketing leadership roles. Hands-on with React, Next.js, WordPress and AWS Cloud Sales certified. Drives growth, GTM and customer success at PCT.",
-    skills: ["Business Strategy", "React / Next.js", "WordPress", "AWS Cloud Sales", "GTM & Marketing"],
-    quote: "Technology should never be a black box — it should be a lever every business can pull with confidence.",
-  },
-  {
-    slug: "divya-bharti",
-    name: "Divya Bharti",
-    role: "Co-Founder & CTO",
-    email: "divya@peopleschoice.tech",
-    bio: "10+ years of enterprise engineering experience as a .NET specialist. Ex-Infosys, Cognizant, Datamatics and Clarion — has architected and delivered large-scale apps and software platforms across BFSI and enterprise.",
-    skills: [".NET / C#", "Enterprise Architecture", "SQL Server", "Azure", "Software Delivery"],
-    quote: "Great engineering is invisible — it shows up as a product that just works, scales and never lets the customer down.",
-  },
-];
-
 export const SERVICES = [
   { slug: "software-development", title: "Custom Software Development", icon: "Code2", category: "Software", short: "Tailored enterprise software, MVPs and SaaS platforms — built to scale.", bullets: ["Custom & Enterprise Software", "SaaS & Product Development", "MVP Development", "Legacy Modernization", "API & Platform Development"], image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1600&q=80", overview: "We design, build and ship custom software that fits your business — not the other way around. From greenfield SaaS platforms to multi-year modernization programs, our senior-led pods deliver production-grade systems in weeks, not quarters.", deliverables: ["Discovery & solution architecture", "Cloud-native, scalable backends", "Modern UIs (React / Next.js)", "Automated CI/CD & testing", "Production support & SLAs"] },
   { slug: "web-development", title: "Web Development", icon: "Globe", category: "Software", short: "Performant websites, portals and PWAs that convert visitors into customers.", bullets: ["Websites & Custom Web Apps", "Enterprise Portals", "Ecommerce & CMS", "Progressive Web Apps", "Headless / JAMstack"], image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1600&q=80", overview: "From conversion-driven marketing sites to multi-tenant enterprise portals, we build the web experiences your customers want — fast, accessible, and built to rank.", deliverables: ["UX research & design systems", "Headless CMS & ecommerce", "Core Web Vitals optimization", "SEO + analytics foundation", "A/B-testing & growth loops"] },

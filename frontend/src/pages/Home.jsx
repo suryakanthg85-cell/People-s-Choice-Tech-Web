@@ -15,7 +15,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  SERVICES, INDUSTRIES, CASE_STUDIES, PROCESS, FAQS, STATS, FOUNDERS, TECH_STACK,
+  SERVICES, INDUSTRIES, CASE_STUDIES, PROCESS, FAQS, STATS, TECH_STACK,
 } from "@/lib/data";
 
 const ICONS = { Code2, Brain, Cloud, Smartphone, Database, ShieldCheck, Layers, Compass, Sparkles, Globe2: Globe2 };
@@ -395,33 +395,6 @@ export default function Home() {
                   <p className="mt-2 text-[14px] text-slate-600 line-clamp-2">{c.summary}</p>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FOUNDERS */}
-      <section className="py-24 lg:py-32" data-testid="founders-section">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <Eyebrow>The founders</Eyebrow>
-            <h2 className="mt-5 text-4xl lg:text-5xl font-bold tracking-[-0.005em] text-slate-900">
-              Two decades of enterprise experience. One mission.
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {FOUNDERS.map((f) => (
-              <div key={f.slug} className="bg-white p-7 rounded-2xl border border-slate-200" data-testid={`founder-card-${f.slug}`}>
-                <div className="flex items-center gap-5">
-                  <img src={f.image} alt={f.name} className="h-20 w-20 rounded-2xl object-cover" />
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900">{f.name}</h3>
-                    <div className="text-[13px] text-blue-600 font-semibold mt-0.5">{f.role}</div>
-                  </div>
-                </div>
-                <p className="mt-5 text-slate-600 text-[14.5px] leading-relaxed">{f.bio}</p>
-                <div className="mt-5 pt-5 border-t border-slate-100 italic text-slate-700 text-[14px]">"{f.quote}"</div>
-              </div>
             ))}
           </div>
         </div>

@@ -70,7 +70,6 @@ const SECTIONS = [
     title: "Company",
     links: [
       { label: "About Us", to: "/about" },
-      { label: "Founders", to: "/about#founders" },
       { label: "Case Studies", to: "/case-studies" },
       { label: "Careers", to: "/careers" },
       { label: "Resources", to: "/resources" },

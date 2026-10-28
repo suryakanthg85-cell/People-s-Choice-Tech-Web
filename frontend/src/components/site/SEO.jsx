@@ -23,16 +23,6 @@ const COMPANY = {
     latitude: "18.5204",
     longitude: "73.8567",
   },
-  founders: [
-    {
-      "@type": "Person",
-      name: "Gopal Giri",
-    },
-    {
-      "@type": "Person",
-      name: "Divya Bharti",
-    },
-  ], // ✅ FIXED: Added missing comma here
   socials: [
     "https://www.linkedin.com/company/people-s-choice-tech/",
     "https://www.facebook.com/profile.php?id=61584707083007",
@@ -132,8 +122,7 @@ export default function SEO({
       legalName: COMPANY.legalName,
       url: COMPANY.url,
       logo: COMPANY.logo,
-      founders: COMPANY.founders,
-      contactPoint: {
+contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
         telephone: COMPANY.phone,
